@@ -1,0 +1,96 @@
+//---------------------------
+//
+// Private > Abstracts > Mixins
+//---------------------------
+
+/// Outputs CSS code, wrapped in a media query, at a particular
+/// viewport size.
+/// @param {String} $breakpoint - The breakpoint at which the CSS
+/// should take effect.
+/// @output CSS code wrapped in a media query.
+/// @see $breakpoints
+@mixin _design-system-breakpoint($breakpoint) {
+    @if(_design-system-is-breakpoint($breakpoint)) {
+        @media (min-width: map-get($ds-layout-breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+@mixin _design-system-fluid($properties, $min-value, $max-value) {
+  
+    $min-vw: map-get($ds-layout-breakpoints, sm);
+    $max-vw: map-get($ds-layout-breakpoints, lg);
+    
+    @each $property in $properties {
+        #{$property}: $min-value;
+    }
+  
+    @include _design-system-breakpoint(sm) {
+        @each $property in $properties {
+            #{$property}: calc(#{$min-value} + #{_design-system-strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{_design-system-strip-unit($max-vw - $min-vw)});
+        }
+    }
+    
+    @include _design-system-breakpoint(lg) {
+        @each $property in $properties {
+            #{$property}: $max-value;
+        }
+    }
+}
+
+@mixin _design-system-fluid-type($min-step, $max-step) {
+    @include _design-system-fluid(
+        font-size, 
+        _design-system-ms-rem($min-step, $ds-typography-ratio-xs),
+        _design-system-ms-rem($max-step, $ds-typography-ratio-lg));
+}
+
+@mixin _design-system-fluid-vr($properties, $min-step, $max-step) {
+    @include _design-system-fluid(
+        $properties, 
+        _design-system-vr-rem($min-step, $ds-typography-ratio-xs),
+         _design-system-vr-rem($max-step, $ds-typography-ratio-lg));
+}
+
+@mixin _design-system-set-properties($properties, $value, $is-negative-value: false) {
+    @each $property in $properties {
+        @if($is-negative-value) {
+            #{$property}: -#{$value};
+        }
+        @else {
+            #{$property}: $value;
+        }
+    }
+}
+
+/// Responsive Vertical Rhythm
+@mixin _design-system-r-vr($properties, $step-xs, $step-lg, $is-em, $is-negative) {
+
+    $value-xs: null;
+    $value-lg: null;
+
+    @if($is-em) {
+        $value-xs: _design-system-vr-em($step-xs, $ds-typography-ratio-xs);
+        $value-lg: _design-system-vr-em($step-lg, $ds-typography-ratio-lg);
+    } @else {
+        $value-xs: _design-system-vr-rem($step-xs, $ds-typography-ratio-xs);
+        $value-lg: _design-system-vr-rem($step-lg, $ds-typography-ratio-lg);
+    }
+
+    @include _design-system-set-properties($properties, $value-xs, $is-negative);
+
+    @include _design-system-breakpoint(lg) {
+        @include _design-system-set-properties($properties, $value-lg, $is-negative);
+    }
+}
+
+/// Responsive Vertical Rhythm (EM)
+@mixin _design-system-r-vr-em($properties, $step-xs, $step-lg, $is-negative) {
+    @include _design-system-r-vr($properties, $step-xs, $step-lg, true, $is-negative);
+}
+
+/// Responsive Vertical Rhythm (REM)
+@mixin _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative) {
+    @include _design-system-r-vr($properties, $step-xs, $step-lg, false, $is-negative);
+}

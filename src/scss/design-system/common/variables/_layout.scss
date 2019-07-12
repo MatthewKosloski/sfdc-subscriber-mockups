@@ -1,0 +1,17 @@
+//---------------------------
+//
+// Common > Variables > Layout
+//---------------------------
+
+$ds-layout-breakpoints: (
+    xs: 0rem,
+    sm: 31.250rem,
+    md: 48rem,
+    lg: 62.5rem
+) !default;
+
+$ds-layout-container-width: 600px !default;
+
+$ds-layout-grid-gutter: 0.75 !default;
+$ds-layout-grid-cols: 12 !default;
+$ds-layout-grid-sizes: ('xs', 'sm', 'md', 'lg') !default;

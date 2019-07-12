@@ -1,0 +1,70 @@
+//---------------------------
+//
+// Public > Layout > Grid
+//---------------------------
+
+.l-row {
+    @include ds-vr-rem((margin-left, margin-right), $ds-layout-grid-gutter, $ds-layout-grid-gutter, true);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.l-col {
+    @include ds-vr-rem((padding-left, padding-right), $ds-layout-grid-gutter, $ds-layout-grid-gutter);
+}
+
+@each $size in $ds-layout-grid-sizes {
+	@include ds-breakpoint($size) {
+		.l-col--#{$size}-first {
+			order: -1;
+		}
+		.l-col--#{$size}-last {
+			order: 1;
+		}
+		// Vertical/Horizontal alignment
+		.l-col--#{$size}-align {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		// Vertial alignment
+		.l-col--#{$size}-valign {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		// Horizontal alignment
+		.l-col--#{$size}-halign {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		// Left alignment
+		.l-col--#{$size}-lalign {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+
+		// Right alignment
+		.l-col--#{$size}-ralign {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+		@for $col from 1 through $ds-layout-grid-cols {
+			$width: $col / $ds-layout-grid-cols * 100%;
+			.l-col--#{$size}-#{$col}-of-#{$ds-layout-grid-cols} {
+				flex: 1 0 $width;
+				max-width: $width;
+			}
+			.l-col--#{$size}-offset-#{$col}-of-#{$ds-layout-grid-cols} {
+				margin-left: $width;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+//---------------------------
+//
+// Public > Abstracts > Mixins
+//---------------------------
+
+/// Outputs CSS code, wrapped in a media query, at a particular
+/// viewport size.
+/// @param {String} $breakpoint - The breakpoint at which the CSS
+/// should take effect.
+/// @output CSS code wrapped in a media query.
+/// @see $breakpoints
+@mixin ds-breakpoint($breakpoint) {
+    @include _design-system-breakpoint($breakpoint) {
+        @content;
+    }
+}
+
+@mixin ds-fluid-type($min-step, $max-step) {
+    @include _design-system-fluid-type($min-step, $max-step);
+}
+
+@mixin ds-vr-em($properties, $step-xs: 1, $step-lg: 1, $is-negative: false) {
+    @include _design-system-r-vr-em($properties, $step-xs, $step-lg, $is-negative);
+}
+
+@mixin ds-vr-rem($properties, $step-xs: 1, $step-lg: 1, $is-negative: false) {
+    @include _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative);
+}
