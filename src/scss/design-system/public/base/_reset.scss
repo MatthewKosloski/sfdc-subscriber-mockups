@@ -24,6 +24,10 @@ html {
 	box-sizing: inherit;
 }
 
+html {
+	box-sizing: border-box;
+}
+
 input,
 button,
 textarea,
