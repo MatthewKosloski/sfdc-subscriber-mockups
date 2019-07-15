@@ -1,0 +1,20 @@
+//----------------------
+//
+// Public > Utils > Font
+//----------------------
+
+.u-font-light {
+    font-weight: 300;
+}
+
+.u-font-normal {
+    font-weight: 400;
+}
+
+.u-font-heavy {
+    font-weight: 700;
+}
+
+.u-font-primary {
+    font-family: $ds-typography-font-primary;
+}
