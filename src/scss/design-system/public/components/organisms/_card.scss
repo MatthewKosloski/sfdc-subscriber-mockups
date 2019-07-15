@@ -1,0 +1,31 @@
+//------------------------------
+//
+// Components > Organisms > Card
+//------------------------------
+
+.o-card {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #efefef;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+.o-card__header {
+    @include ds-spacing(p, one);
+    border-bottom: 2px solid #efefef;
+}
+
+.o-card__title {
+    @include ds-fluid-type(2, 1);
+}
+
+.o-card__subtitle {
+    margin-bottom: 0;
+}
+
+.o-card__body {
+    @include ds-spacing(p, one);
+    p {
+        margin-bottom: 0;
+    }
+}

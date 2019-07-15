@@ -6,16 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SFDC Subscriber Mockup | Design System</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./design-system.css">
 </head>
 <body>
     <div class="l-container">
-        <div class="l-row">
-            <div class="l-col l-col--xs-12-of-12">
-                <h1>SFDC Subscriber</h1>
-                <h2>Design System & Style Guide</h2>
+        <header class="u-my-three">
+            <div class="l-row">
+                <div class="l-col l-col--xs-12-of-12">
+                    <h1 class="u-mb-half">SFDC Subscriber</h1>
+                    <h2 class="u-font-light u-mb-two">Design System & Style Guide</h2>
+                </div>
             </div>
-        </div>
+        </header>
+        <section class="section typography">
+            <h3 class="section__title">Typography</h3>
+            <div class="section__inner">
+                <div class="l-row">
+                    <div class="l-col l-col--xs-12-of-12 l-col l-col--md-6-of-12">
+                        <p class="h4">Fonts</p>
+                        <p class="h2 u-font-primary u-font-heavy">Source Sans Pro Bold</p>
+                        <p class="h2 u-font-primary">Source Sans Pro Regular</p>
+                    </div>
+                    <div class="l-col l-col--xs-12-of-12 l-col l-col--md-6-of-12">
+                        <p class="h4">Font colors</p>
+                        <div class="color" style="background: #3d3d3f;">
+                            <span class="color__name">Neutral Black</span>
+                            <span class="color__hex">#3d3d3f</span>
+                        </div>
+                        <div class="color" style="background: #b9b7b9;">
+                            <span class="color__name">Pantone Cool Gray 4</span>
+                            <span class="color__hex">#b9b7b9</span>
+                        </div>
+                    </div>
+                    <div class="l-col l-col--xs-12-of-12 l-col l-col--md-6-of-12">
+                        <p class="h4">Headings</p>
+                        <h1 class="u-font-primary">Heading One</h1>
+                        <h2 class="u-font-primary">Heading Two</h2>
+                        <h3 class="u-font-primary">Heading Three</h3>
+                        <h4 class="u-font-primary">Heading Four</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section card">
+            <h3 class="section__title">Card</h3>
+            <div class="section__inner">
+                <div class="o-card">
+                    <div class="o-card__header">
+                        <p class="o-card__title h4">Card Title</p>
+                        <p class="o-card__subtitle h4">Card Subtitle</p>
+                    </div>
+                    <div class="o-card__body">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>

@@ -4,36 +4,45 @@
 //---------------------------
 
 html {
-    box-sizing: border-box;
-    font-size: 100%;
-    line-height: $ds-typography-ratio-xs;
-    @include ds-breakpoint(lg) {
-      font-size: 112.5%;
-      line-height: $ds-typography-ratio-lg;
-    }
-  }
-
-h1 {
-    @include ds-fluid-type(8, 4);
+	font-size: #{$ds-typography-font-size-xs + '%'};
+	line-height: $ds-typography-ratio-xs;
+	@include ds-breakpoint(lg) {
+		font-size: #{$ds-typography-font-size-lg + '%'};
+		line-height: $ds-typography-ratio-lg;
+	}
 }
 
-h2 {
-    @include ds-fluid-type(6, 3);
+h1,
+.h1,
+%h1 {
+	@include ds-fluid-type(8, 4);
+	@include ds-vr-rem(margin-bottom, 0.25, 1);
 }
 
-h3 {
-    @include ds-fluid-type(4, 2);
+h2,
+.h2,
+%h2 {
+	@include ds-fluid-type(6, 3);
 }
 
-h4 {
-    @include ds-fluid-type(2, 1);
+h3,
+.h3,
+%h3 {
+	@include ds-fluid-type(4, 2);
 }
 
-h1, h2, h3, h4 {
-    @include ds-vr-rem(margin-bottom, 0.5, 0.5);
+h4,
+.h4,
+%h4 {
+	@include ds-fluid-type(2, 1);
+}
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4,
+%h1, %h2, %h3, %h4 {
+	@include ds-vr-rem(margin-bottom, 0.5, 1);
 }
 
 p {
-    @include ds-vr-rem(margin-bottom, 0.5, 0.5);
-    @include ds-vr-rem(line-height, 1.25, 1);
+	@include ds-vr-rem(margin-bottom, 0.5, 1);
 }

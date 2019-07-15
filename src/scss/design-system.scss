@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+@import 'design-system/design-system';
+
+html {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body.guides {
+    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, 0.3) 1px, transparent 1px);
+    background-repeat: repeat;
+    background-position: left top;
+    background-size: 100% #{($ds-typography-font-size-xs / 100 * 16) * $ds-typography-ratio-xs + "px"};
+    @include ds-breakpoint(lg) {
+        background-size: 100% #{($ds-typography-font-size-lg / 100 * 16) * $ds-typography-ratio-lg + "px"};
+    }
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+}
+
+.section {
+    @include ds-spacing(mb, one);
+}
+
+.section.card .section__inner {
+    @include ds-vr-em(padding, 0.5, 1);
+    background-color: #fbfbfd;
+}
+
+.section__title {
+    @include ds-spacing(mb, two);
+}
+
+.color {
+    @include ds-vr-em(border-radius, 0.25, 0.25);
+    @include ds-vr-em(padding, 0.5, 1);
+    @include ds-vr-rem(margin-bottom, 1, 2);
+    color: $ds-colors-white;
+}
+
+.color__name {
+    @include ds-vr-rem(margin-bottom, 0.25, 0.25);
+    @extend h4;
+    display: block;
+}

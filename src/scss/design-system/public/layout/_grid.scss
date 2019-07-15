@@ -58,7 +58,12 @@
 		}
 		@for $col from 1 through $ds-layout-grid-cols {
 			$width: $col / $ds-layout-grid-cols * 100%;
+			$is-full-column: $col == $ds-layout-grid-cols;
+
 			.l-col--#{$size}-#{$col}-of-#{$ds-layout-grid-cols} {
+				@if($is-full-column) {
+					@include ds-vr-rem(margin-bottom, $ds-layout-grid-gutter, $ds-layout-grid-gutter);
+				}
 				flex: 1 0 $width;
 				max-width: $width;
 			}
