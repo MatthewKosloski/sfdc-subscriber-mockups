@@ -28,7 +28,8 @@
   
     @include _design-system-breakpoint(sm) {
         @each $property in $properties {
-            #{$property}: calc(#{$min-value} + #{_design-system-strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{_design-system-strip-unit($max-vw - $min-vw)});
+            #{$property}: calc(#{$min-value} + #{_design-system-strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / 
+            #{_design-system-strip-unit($max-vw - $min-vw)});
         }
     }
     
@@ -86,11 +87,63 @@
 }
 
 /// Responsive Vertical Rhythm (EM)
-@mixin _design-system-r-vr-em($properties, $step-xs, $step-lg, $is-negative) {
+@mixin _design-system-r-vr-em($properties, $step-xs, $step-lg, $is-negative: false) {
     @include _design-system-r-vr($properties, $step-xs, $step-lg, true, $is-negative);
 }
 
 /// Responsive Vertical Rhythm (REM)
-@mixin _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative) {
+@mixin _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative: false) {
     @include _design-system-r-vr($properties, $step-xs, $step-lg, false, $is-negative);
+}
+
+@mixin _design-system-spacing($shorthand, $step-names, $use-em, $props-map, $step-map) {
+    $props: null;
+    $step-xs: null;
+    $step-lg: null;
+
+    $has-valid-shorthand: map-has-key($props-map, $shorthand);
+    $has-valid-xs-step: map-has-key($step-map, nth($step-names, 1));
+    $has-one-step: length($step-names) == 1;
+    $has-two-steps: length($step-names) == 2;
+
+    @if($has-valid-shorthand) {
+        $props: map-get($props-map, $shorthand);
+    } @else {
+        @error 'Invalid shorthand #{$shorthand}.';
+    }
+
+    @if($has-valid-xs-step) {
+        $step-xs: map-get($step-map, nth($step-names, 1));
+    } @else {
+        @error 'Invalid xs-step #{nth($step-names, 1)}.';
+    }
+
+    @if($has-one-step) {
+        $step-lg: $step-xs;
+    } @else if($has-two-steps) {
+        $has-valid-lg-step: map-has-key($step-map, nth($step-names, 2));
+        @if($has-valid-lg-step) {
+            $step-lg: map-get($step-map, nth($step-names, 2));
+        } @else {
+            @error 'Invalid xs-step #{nth($step-names, 2)}.';
+        }
+    } @else {
+        @error 'Must have at least one step and no more than two.';
+    }
+
+    @if($use-em) {
+        @include _design-system-r-vr-em($props, $step-xs, $step-lg);
+    } @else {
+        @include _design-system-r-vr-rem($props, $step-xs, $step-lg);
+    }
+}
+
+@mixin _design-system-create-spacing-classes($props-map, $step-map) {
+    @each $shorthand, $props in $props-map {
+        @each $step-name, $step-value in $step-map {
+            .u-#{$shorthand}-#{$step-name} {
+                @include _design-system-spacing($shorthand, $step-name, false, $props-map, $step-map);
+            }
+        }
+    }
 }

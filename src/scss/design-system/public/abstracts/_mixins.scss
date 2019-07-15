@@ -26,3 +26,19 @@
 @mixin ds-vr-rem($properties, $step-xs: 1, $step-lg: 1, $is-negative: false) {
     @include _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative);
 }
+
+@mixin ds-spacing(
+    $shorthand, 
+    $step-names, 
+    $use-em: false, 
+    $props-map: $ds-spacing-props-map, 
+    $step-map: $ds-spacing-step-map
+) {
+    @include _design-system-spacing($shorthand, $step-names, $use-em, $props-map, $step-map);
+}
+
+@mixin ds-create-spacing-classes {
+    @include _design-system-create-spacing-classes(
+        $props-map: $ds-spacing-props-map, 
+        $step-map: $ds-spacing-step-map);
+}
