@@ -25,8 +25,8 @@ header {
 }
 
 .section.card .section__inner {
-    @include ds-vr-em(padding, 0.5, 1);
-    background-color: #fbfbfd;
+    @include ds-spacing(p, three, $use-em: true);
+    background-color: $ds-colors-alabaster;
 }
 
 .section__title {
@@ -35,13 +35,13 @@ header {
 
 .color {
     @include ds-vr-em(border-radius, 0.25, 0.25);
-    @include ds-vr-em(padding, 0.5, 1);
-    @include ds-vr-rem(margin-bottom, 1, 2);
+    @include ds-spacing(p, one, $use-em: true);
+    @include ds-spacing(mb, (one, two), $use-em: true);
     color: $ds-colors-white;
 }
 
 .color__name {
-    @include ds-vr-rem(margin-bottom, 0.25, 0.25);
+    @include ds-spacing(mb, quarter);
     @extend h4;
     display: block;
 }

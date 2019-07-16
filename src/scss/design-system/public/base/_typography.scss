@@ -6,6 +6,7 @@
 html {
 	font-size: #{$ds-typography-font-size-xs + '%'};
 	line-height: $ds-typography-ratio-xs;
+	color: $ds-colors-neutral-black;
 	@include ds-breakpoint(lg) {
 		font-size: #{$ds-typography-font-size-lg + '%'};
 		line-height: $ds-typography-ratio-lg;
@@ -16,7 +17,7 @@ h1,
 .h1,
 %h1 {
 	@include ds-fluid-type(8, 4);
-	@include ds-vr-rem(margin-bottom, 0.25, 1);
+	@include ds-spacing(mb, (quarter, one));
 }
 
 h2,
@@ -40,9 +41,9 @@ h4,
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4,
 %h1, %h2, %h3, %h4 {
-	@include ds-vr-rem(margin-bottom, 0.5, 1);
+	@include ds-spacing(mb, (half, one));
 }
 
 p {
-	@include ds-vr-rem(margin-bottom, 0.5, 1);
+	@include ds-spacing(mb, (half, one));
 }
