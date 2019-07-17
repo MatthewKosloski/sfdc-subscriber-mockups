@@ -4,6 +4,22 @@
 
 html {
     font-family: 'Helvetica Neue', sans-serif;
+    --color-dusty-gray: #999;
+    --color-alto: #ddd; 
+    --color-seashell: #f1f1f1;
+    --color-white: #fff;
+    --color-mineshaft: #2b2b2b;
+    --color-buttermilk: #fff5b1;
+    --color-galliano: #dbab09;
+}
+
+code {
+    @include ds-spacing(p, quarter);
+    font-size: ds-px-to-rem(12);
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: var(--color-buttermilk);
+    color: var(--color-galliano);
+    border-radius: 4px;
 }
 
 body.guides {
@@ -17,31 +33,97 @@ body.guides {
 }
 
 header {
-    border-bottom: 1px solid #ddd;
+    @include ds-spacing(mb, three);
+    @include ds-spacing(pt, one);
+    @include ds-spacing(pb, three);
+    background-color: var(--color-seashell);
 }
 
 .section {
     @include ds-spacing(mb, one);
 }
 
-.section.card .section__inner {
+.section__title {
+    @include ds-spacing(pb, half);
+    @include ds-spacing(mb, one);
+    border-bottom: 1px solid var(--color-alto);
+}
+
+.section__subtitle {
+    @include ds-spacing(mt, two);
+}
+
+.card-bg {
     @include ds-spacing(p, three, $use-em: true);
     background-color: $ds-colors-alabaster;
 }
 
-.section__title {
-    @include ds-spacing(mb, two);
+.color {
+    &::before {
+        content: '';
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+    }
+    @include ds-spacing(mb, one);
+    display: flex;
+    align-items: center;
 }
 
-.color {
-    @include ds-vr-em(border-radius, 0.25, 0.25);
-    @include ds-spacing(p, one, $use-em: true);
-    @include ds-spacing(mb, (one, two), $use-em: true);
-    color: $ds-colors-white;
+.color__titles {
+    @include ds-spacing(ml, one);
 }
 
 .color__name {
-    @include ds-spacing(mb, quarter);
-    @extend h4;
+    font-size: ds-px-to-rem(16);
     display: block;
+}
+
+.color__hex {
+    font-size: ds-px-to-rem(14);
+    color: var(--color-dusty-gray);
+}
+
+.color--neutral-black::before {
+    background-color: $ds-colors-neutral-black;
+}
+
+.color--pantone-cool-gray-1::before {
+    background-color: $ds-colors-pantone-cool-gray-1;
+}
+
+.color--pantone-cool-gray-4::before {
+    background-color: $ds-colors-pantone-cool-gray-4;
+}
+
+.color--gallery::before {
+    background-color: $ds-colors-gallery;
+}
+
+.color--alabaster::before {
+    background-color: $ds-colors-alabaster;
+}
+
+.color--pantone-306::before {
+    background-color: $ds-colors-pantone-306;
+}
+
+.color--teal-blue::before {
+    background-color: $ds-colors-teal-blue;
+}
+
+.color--valencia::before {
+    background-color: $ds-colors-valencia;
+}
+
+.color--cosmos::before {
+    background-color: $ds-colors-cosmos;
+}
+
+.color--eucalyptus::before {
+    background-color: $ds-colors-eucalyptus;
+}
+
+.color--snowy-mint::before {
+    background-color: $ds-colors-snowy-mint;
 }
