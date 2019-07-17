@@ -131,3 +131,12 @@
 @function _design-system-vr-rem($step, $ratio) {
 	@return _design-system-rem(_design-system-vr($step, $ratio));
 }
+
+/// Converts pixels to rem units.
+@function _design-system-px-to-rem($px, $base-font-size) {
+	@return _design-system-rem($px / $base-font-size);
+}
+
+@function _design-system-px-to-em($px, $base-font-size) {
+	@return _design-system-em($px / $base-font-size);
+}
