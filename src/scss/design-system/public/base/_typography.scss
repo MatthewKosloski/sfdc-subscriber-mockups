@@ -4,13 +4,8 @@
 //---------------------------
 
 html {
-	font-size: #{$ds-typography-font-size-xs + '%'};
-	line-height: $ds-typography-ratio-xs;
+	@include ds-init-root-type;
 	color: $ds-colors-neutral-black;
-	@include ds-breakpoint(lg) {
-		font-size: #{$ds-typography-font-size-lg + '%'};
-		line-height: $ds-typography-ratio-lg;
-	}
 }
 
 h1,
@@ -47,11 +42,11 @@ h1, h2, h3, h4,
 .h1, .h2, .h3, .h4,
 %h1, %h2, %h3, %h4,
 p, li {
-	@include ds-spacing(mb, one);
+	@include ds-spacing-rem(mb, one);
 }
 
 ul,
 ol {
-	@include ds-spacing(pl, two);
-	@include ds-spacing(mb, two);
+	@include ds-spacing-rem(pl, two);
+	@include ds-spacing-rem(mb, two);
 }

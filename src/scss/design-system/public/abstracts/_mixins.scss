@@ -74,3 +74,13 @@
 @mixin ds-px-to-rem($properties, $px, $is-negative: false) {
     @include _design-system-px-to-rem($properties, $px, $is-negative);
 }
+
+@mixin ds-init-root-type($font-sizes: (
+    $ds-typography-font-size-xs,
+    $ds-typography-font-size-lg
+), $ratios: (
+    $ds-typography-ratio-xs,
+    $ds-typography-ratio-lg
+)) {
+    @include _design-system-init-root-type($font-sizes, $ratios);
+}

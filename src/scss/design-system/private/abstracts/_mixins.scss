@@ -148,3 +148,17 @@
         }
     }
 }
+
+@mixin _design-system-init-root-type($font-sizes, $ratios) {
+    $font-size-xs: nth($font-sizes, 1);
+    $font-size-lg: nth($font-sizes, 2);
+    $ratio-xs: nth($ratios, 1);
+    $ratio-lg: nth($ratios, 2);
+
+    font-size: percentage($font-size-xs / 100);
+	line-height: $ratio-xs;
+	@include _design-system-breakpoint(lg) {
+		font-size: percentage($font-size-lg / 100);
+		line-height: $ratio-lg;
+	}
+}
