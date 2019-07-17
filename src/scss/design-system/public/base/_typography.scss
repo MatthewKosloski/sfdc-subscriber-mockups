@@ -47,6 +47,5 @@ p, li {
 
 ul,
 ol {
-	@include ds-spacing-rem(pl, two);
-	@include ds-spacing-rem(mb, two);
+	@include ds-spacing-rem((pl, mb), two);
 }
