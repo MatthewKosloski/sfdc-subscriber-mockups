@@ -1,0 +1,13 @@
+.m-dropdown {
+    .a-btn {
+        display: flex;
+        align-items: center;
+    }
+    svg {
+        @include ds-spacing(ml, half, $use-em: true);
+        transform: scale(1.25);
+        fill: $ds-colors-white;
+        width: 1em;
+        height: 1em;
+    }
+}

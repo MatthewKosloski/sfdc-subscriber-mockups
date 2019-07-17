@@ -1,0 +1,66 @@
+.a-btn {
+    @include ds-spacing(px, half, $use-em: true);
+    @include ds-spacing(py, quarter, $use-em: true);
+    font-size: ds-px-to-em(16);
+    border-radius: ds-px-to-em(4);
+    border: ds-px-to-em(3) solid transparent;
+    cursor: pointer;
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.a-btn--heavy {
+    font-weight: 700;
+}
+
+.a-btn--small {
+    font-size: ds-px-to-rem(12);
+}
+
+.a-btn--large {
+    font-size: ds-px-to-rem(20);
+}
+
+.a-btn--primary,
+.a-btn--danger,
+.a-btn--success {
+    color: $ds-colors-white;
+}
+
+.a-btn--primary {
+    background-color: $ds-colors-neutral-black;
+    &:focus {
+        box-shadow: 0 0 0 ds-px-to-em(3) lighten($ds-colors-neutral-black, 50%);
+    }
+    &:hover {
+        background-color: darken($ds-colors-neutral-black, 10%);
+    }
+}
+
+.a-btn--danger {
+    background-color: $ds-colors-valencia;
+    &:focus {
+        box-shadow: 0 0 0 ds-px-to-em(3) lighten($ds-colors-valencia, 25%);
+    }
+    &:hover {
+        background-color: darken($ds-colors-valencia, 10%);
+    }
+}
+
+.a-btn--success {
+    background-color: $ds-colors-eucalyptus;
+    &:focus {
+        box-shadow: 0 0 0 ds-px-to-em(3) lighten($ds-colors-eucalyptus, 35%);
+    }
+    &:hover {
+        background-color: darken($ds-colors-eucalyptus, 10%);
+    }
+}
+
+.a-btn--transparent {
+    background-color: transparent;
+}
