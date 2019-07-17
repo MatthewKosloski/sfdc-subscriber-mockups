@@ -12,8 +12,8 @@
 
 .o-card__header,
 .o-card__body {
-    @include ds-spacing(px, one);
-    @include ds-spacing(py, (one, half));
+    @include ds-spacing-rem(px, one);
+    @include ds-spacing-rem(py, (one, half));
 }
 
 .o-card__header {
@@ -40,7 +40,6 @@
 }
 
 .o-card__subtitle {
-    // @include ds-spacing(mt, quarter);
     @include ds-fluid-type(0, 0);
     color: $ds-colors-pantone-cool-gray-4;
     margin-bottom: 0;

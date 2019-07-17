@@ -87,21 +87,24 @@
     @include _design-system-r-vr($properties, $step-xs, $step-lg, false, $is-negative, $is-important);
 }
 
-@mixin _design-system-spacing($shorthand, $step-names, $use-em, $shorthands-map, $step-map, $is-important: false) {
+@mixin _design-system-spacing(
+    $shorthands, 
+    $step-names, 
+    $shorthands-map, 
+    $step-map,
+    $use-em: false, 
+    $is-important: false,
+    $is-negative: false
+) {
     $props: null;
     $step-xs: null;
     $step-lg: null;
 
-    $has-valid-shorthand: map-has-key($shorthands-map, $shorthand);
+    $props: _design-system-join-map-keys($shorthands-map, $shorthands);
+
     $has-valid-xs-step: map-has-key($step-map, nth($step-names, 1));
     $has-one-step: length($step-names) == 1;
     $has-two-steps: length($step-names) == 2;
-
-    @if($has-valid-shorthand) {
-        $props: map-get($shorthands-map, $shorthand);
-    } @else {
-        @error 'Invalid shorthand #{$shorthand}.';
-    }
 
     @if($has-valid-xs-step) {
         $step-xs: map-get($step-map, nth($step-names, 1));
@@ -122,8 +125,6 @@
         @error 'Must have at least one step and no more than two.';
     }
 
-    $is-negative: false;
-
     @if($use-em) {
         @include _design-system-r-vr-em($props, $step-xs, $step-lg, $is-negative, $is-important);
     } @else {
@@ -135,7 +136,14 @@
     @each $shorthand, $props in $shorthands-map {
         @each $step-name, $step-value in $step-map {
             .u-#{$shorthand}-#{$step-name} {
-                @include _design-system-spacing($shorthand, $step-name, false, $shorthands-map, $step-map, true);
+                @include _design-system-spacing(
+                    $shorthand, 
+                    $step-name,
+                    $shorthands-map, 
+                    $step-map,
+                    $use-em: false,
+                    $is-important: true,
+                    $is-negative: false);
             }
         }
     }

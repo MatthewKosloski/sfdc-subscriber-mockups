@@ -23,22 +23,42 @@
     @include _design-system-fluid-type($min-step, $max-step, $min-vw, $max-vw);
 }
 
-@mixin ds-vr-em($properties, $step-xs: 1, $step-lg: 1, $is-negative: false) {
-    @include _design-system-r-vr-em($properties, $step-xs, $step-lg, $is-negative);
-}
-
-@mixin ds-vr-rem($properties, $step-xs: 1, $step-lg: 1, $is-negative: false) {
-    @include _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative);
-}
-
-@mixin ds-spacing(
-    $shorthand, 
+@mixin ds-spacing-em(
+    $shorthands, 
     $step-names, 
-    $use-em: false, 
+    $is-important: false,
+    $is-negative: false, 
     $shorthands-map: $ds-spacing-shorthands-map, 
     $step-map: $ds-spacing-step-map
 ) {
-    @include _design-system-spacing($shorthand, $step-names, $use-em, $shorthands-map, $step-map);
+    $use-em: true;
+    @include _design-system-spacing(
+        $shorthands, 
+        $step-names,
+        $shorthands-map, 
+        $step-map,
+        $use-em,
+        $is-important,
+        $is-negative);
+}
+
+@mixin ds-spacing-rem(
+    $shorthands, 
+    $step-names, 
+    $is-important: false,
+    $is-negative: false, 
+    $shorthands-map: $ds-spacing-shorthands-map, 
+    $step-map: $ds-spacing-step-map
+) {
+    $use-em: false;
+    @include _design-system-spacing(
+        $shorthands, 
+        $step-names,
+        $shorthands-map, 
+        $step-map,
+        $use-em,
+        $is-important,
+        $is-negative);
 }
 
 @mixin ds-create-spacing-classes {

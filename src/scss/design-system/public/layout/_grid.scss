@@ -4,14 +4,14 @@
 //---------------------------
 
 .l-row {
-    @include ds-vr-rem((margin-left, margin-right), $ds-layout-grid-gutter, $ds-layout-grid-gutter, true);
+	@include ds-spacing-rem((ml, mr), $ds-layout-grid-gutter, $is-important: false, $is-negative: true);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
 .l-col {
-    @include ds-vr-rem((padding-left, padding-right), $ds-layout-grid-gutter, $ds-layout-grid-gutter);
+	@include ds-spacing-rem((pl, pr), $ds-layout-grid-gutter);
 }
 
 @each $size in $ds-layout-grid-sizes {

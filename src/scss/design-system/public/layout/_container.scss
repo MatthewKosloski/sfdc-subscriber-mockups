@@ -4,7 +4,7 @@
 //---------------------------
 
 .l-container {
-    @include ds-vr-rem((padding-left, padding-right));
+    @include ds-spacing-rem((pl, pr), one);
     width: $ds-layout-container-width;
     max-width: 100%;
     margin-left: auto;
