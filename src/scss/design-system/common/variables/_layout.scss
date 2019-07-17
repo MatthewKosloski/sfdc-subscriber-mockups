@@ -12,6 +12,6 @@ $ds-layout-breakpoints: (
 
 $ds-layout-container-width: 960px !default;
 
-$ds-layout-grid-gutter: 1 !default;
+$ds-layout-grid-gutter: one !default; // Must be a valid key from $ds-spacing-step-map
 $ds-layout-grid-cols: 12 !default;
 $ds-layout-grid-sizes: ('xs', 'sm', 'md', 'lg') !default;
