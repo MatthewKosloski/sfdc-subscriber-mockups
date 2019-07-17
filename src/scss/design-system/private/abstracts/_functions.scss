@@ -140,3 +140,38 @@
 @function _design-system-px-to-em($px, $base-font-size) {
 	@return _design-system-em($px / $base-font-size);
 }
+
+/// Returns a list composed of the elements from each key in $keys. If
+/// the element associated with a key is a list, then all of the lists
+/// elements are included.
+/// 
+/// @example
+/// 	$map: (
+///    		px: ('padding-left', 'padding-right'),
+///    		pt: 'padding-top',
+///			pb: 'padding-bottom',
+///			m: 'margin'
+/// 	);
+///     $keys: (pt, pb, px);
+///		_design-system-join-map-keys($map, $keys)
+/// 	
+/// @param {Map} $map - The map for which each key in $keys belongs.
+/// @param {List} $keys - The keys associated with the desired elements.
+/// @return {List} A new list containing the values from
+/// each key in $keys.
+@function _design-system-join-map-keys($map, $keys) {
+	$list: ();
+
+	@each $key in $keys {
+		$is-invalid-key: map-has-key($map, $key) == false;
+
+		@if($is-invalid-key) {
+			$valid-keys: map-keys($map);
+			@error 'Invalid key #{$key}. Valid keys include: #{$valid-keys}.';
+		} @else {
+			$list: join($list, map-get($map, $key));
+		}
+	}
+
+	@return $list;
+}
