@@ -13,5 +13,5 @@ npm install -g sass
 Then, from `src`, run:
 
 ```
-sass scss/design-system.scss:design-system.css --watch
+sass scss/style-guide.scss:style-guide.css --watch
 ```
