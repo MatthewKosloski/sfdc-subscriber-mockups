@@ -20,21 +20,21 @@
 }
 
 @mixin _design-system-fluid($properties, $min-value, $max-value, $min-vw, $max-vw) {
-    @include _design-system-set-properties($properties, $min-value);
+    @each $property in $properties {
+        #{$property}: $min-value;
+    }
   
     @include _design-system-breakpoint(sm) {
         @each $property in $properties {
-            #{$property}: calc(
-                #{$min-value} 
-                + 
-                #{_design-system-strip-unit($max-value - $min-value)} 
-                * (100vw - #{$min-vw}) / 
-                #{_design-system-strip-unit($max-vw - $min-vw)});
+            #{$property}: calc(#{$min-value} + #{_design-system-strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / 
+            #{_design-system-strip-unit($max-vw - $min-vw)});
         }
     }
     
     @include _design-system-breakpoint(lg) {
-        @include _design-system-set-properties($properties, $max-value);
+        @each $property in $properties {
+            #{$property}: $max-value;
+        }
     }
 }
 
