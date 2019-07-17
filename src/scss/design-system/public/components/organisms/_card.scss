@@ -6,26 +6,51 @@
 .o-card {
     width: 100%;
     border-radius: 6px;
-    border: 2px solid #efefef;
+    border: 2px solid $ds-colors-gallery;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.05);
 }
 
+.o-card__header,
+.o-card__body {
+    @include ds-spacing(px, one);
+    @include ds-spacing(py, (one, half));
+}
+
 .o-card__header {
-    @include ds-spacing(p, one);
-    border-bottom: 2px solid #efefef;
+    border-bottom: 2px solid $ds-colors-gallery;
+}
+
+.o-card--evenly-distributed-header {
+    .o-card__header {
+        @include ds-breakpoint(md) {
+            flex-direction: row;
+            align-items: center;
+        }
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .o-card__title {
-    @include ds-fluid-type(2, 1);
+    @include ds-fluid-type(2, 2);
+    margin-bottom: 0;
+    color: $ds-colors-neutral-black;
+    font-weight: 700;
 }
 
 .o-card__subtitle {
+    // @include ds-spacing(mt, quarter);
+    @include ds-fluid-type(0, 0);
+    color: $ds-colors-pantone-cool-gray-4;
     margin-bottom: 0;
 }
 
 .o-card__body {
-    @include ds-spacing(p, one);
+    overflow-y: auto;
+    height: 100%;
     p {
+        color: $ds-colors-neutral-black;
         margin-bottom: 0;
     }
 }
