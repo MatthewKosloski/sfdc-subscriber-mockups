@@ -1,0 +1,14 @@
+//-------------------------------
+//
+// Public > Abstracts > Functions
+//-------------------------------
+
+@function ds-px-to-em($px, $base-font-size: $ds-typography-font-size-xs) {
+    $base-font-size: ($base-font-size / 100) * 16;
+    @return _design-system-px-to-em($px, $base-font-size);
+}
+
+@function ds-px-to-rem($px, $base-font-size: $ds-typography-font-size-xs) {
+    $base-font-size: ($base-font-size / 100) * 16;
+    @return _design-system-px-to-rem($px, $base-font-size);
+}
