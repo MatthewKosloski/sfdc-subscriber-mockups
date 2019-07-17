@@ -8,20 +8,18 @@
 /// @param {String} $breakpoint - The breakpoint at which the CSS
 /// should take effect.
 /// @output CSS code wrapped in a media query.
-/// @see $breakpoints
+/// @see $ds-layout-breakpoints
 @mixin _design-system-breakpoint($breakpoint) {
     @if(_design-system-is-breakpoint($breakpoint)) {
+        // We are using a non-local variable here ($ds-), but we will
+        // make an exception because it is absolutely necessary.
         @media (min-width: map-get($ds-layout-breakpoints, $breakpoint)) {
             @content;
         }
     }
 }
 
-@mixin _design-system-fluid($properties, $min-value, $max-value) {
-  
-    $min-vw: map-get($ds-layout-breakpoints, sm);
-    $max-vw: map-get($ds-layout-breakpoints, lg);
-    
+@mixin _design-system-fluid($properties, $min-value, $max-value, $min-vw, $max-vw) {
     @each $property in $properties {
         #{$property}: $min-value;
     }
@@ -40,11 +38,11 @@
     }
 }
 
-@mixin _design-system-fluid-type($min-step, $max-step) {
-    @include _design-system-fluid(
-        font-size, 
-        _design-system-ms-rem($min-step, $ds-typography-ratio-xs),
-        _design-system-ms-rem($max-step, $ds-typography-ratio-lg));
+@mixin _design-system-fluid-type($min-step, $max-step, $min-vw, $max-vw) {
+    $property: font-size;
+    $min-font-value: _design-system-ms-rem($min-step, $ds-typography-ratio-xs);
+    $max-font-value: _design-system-ms-rem($max-step, $ds-typography-ratio-lg);
+    @include _design-system-fluid($property, $min-font-value, $max-font-value, $min-vw, $max-vw);
 }
 
 @mixin _design-system-fluid-vr($properties, $min-step, $max-step) {

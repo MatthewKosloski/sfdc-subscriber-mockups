@@ -15,8 +15,12 @@
     }
 }
 
-@mixin ds-fluid-type($min-step, $max-step) {
-    @include _design-system-fluid-type($min-step, $max-step);
+@mixin ds-fluid-type(
+    $min-step, 
+    $max-step, 
+    $min-vw: map-get($ds-layout-breakpoints, sm), 
+    $max-vw: map-get($ds-layout-breakpoints, lg)) {
+    @include _design-system-fluid-type($min-step, $max-step, $min-vw, $max-vw);
 }
 
 @mixin ds-vr-em($properties, $step-xs: 1, $step-lg: 1, $is-negative: false) {
