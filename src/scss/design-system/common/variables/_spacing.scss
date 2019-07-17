@@ -17,7 +17,7 @@ $ds-spacing-props-map: (
     py: ('padding-top', 'padding-bottom'),
     pt: 'padding-top',
     pr: 'padding-right',
-    pb: 'paddin-bottom',
+    pb: 'padding-bottom',
     pl: 'padding-left'
 );
 
@@ -28,5 +28,7 @@ $ds-spacing-step-map: (
     three-fourths: 0.75,
     one: 1,
     two: 2,
-    three: 3
+    three: 3,
+    four: 4,
+    five: 5
 );
