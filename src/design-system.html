@@ -9,59 +9,283 @@
     <link rel="stylesheet" href="./design-system.css">
 </head>
 <body>
-    <div class="l-container">
-        <header class="u-my-three">
+    <header>
+        <div class="l-container">
             <div class="l-row">
                 <div class="l-col l-col--xs-12-of-12">
                     <h1 class="u-mb-half">SFDC Subscriber</h1>
-                    <h2 class="u-font-light u-mb-two">Design System & Style Guide</h2>
+                    <h2 class="u-font-light">Design System & Style Guide</h2>
+                    <label for="js-vr-guides-checkbox">Show Vertical Rhythm Guides</label>
+                    <input type="checkbox" id="js-vr-guides-checkbox" class="u-ml-half">
                 </div>
             </div>
-        </header>
-        <section class="section typography">
-            <h3 class="section__title">Typography</h3>
-            <div class="section__inner">
-                <div class="l-row">
-                    <div class="l-col l-col--xs-12-of-12 l-col l-col--md-6-of-12">
-                        <p class="h4">Fonts</p>
-                        <p class="h2 u-font-primary u-font-heavy">Source Sans Pro Bold</p>
-                        <p class="h2 u-font-primary">Source Sans Pro Regular</p>
-                    </div>
-                    <div class="l-col l-col--xs-12-of-12 l-col l-col--md-6-of-12">
-                        <p class="h4">Font colors</p>
-                        <div class="color" style="background: #3d3d3f;">
-                            <span class="color__name">Neutral Black</span>
-                            <span class="color__hex">#3d3d3f</span>
+        </div>
+    </header>
+    <div class="l-container">
+        <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                <section class="section typography">
+                    <h3 class="section__title">Typography</h3>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Fonts</h4>
+                                <p class="h2 u-font-primary">Source Sans Pro Bold</p>
+                                <p class="h2 u-font-primary u-font-normal">Source Sans Pro Regular</p>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Headings</h4>
+                                <p class="h1 u-font-primary">Heading One</p>
+                                <p class="h2 u-font-primary">Heading Two</p>
+                                <p class="h3 u-font-primary">Heading Three</p>
+                                <p class="h4 u-font-primary">Heading Four</p>
+                            </div>
                         </div>
-                        <div class="color" style="background: #b9b7b9;">
-                            <span class="color__name">Pantone Cool Gray 4</span>
-                            <span class="color__hex">#b9b7b9</span>
+                    </div>
+                </section>
+            </div>
+            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                <section class="section colors">
+                    <h3 class="section__title">Colors</h3>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">UI Colors</h4>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--gallery">
+                                            <div class="color__titles">
+                                                <span class="color__name">Gallery</span>
+                                                <span class="color__hex">#efefef</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--alabaster">
+                                            <div class="color__titles">
+                                                <span class="color__name">Alabaster</span>
+                                                <span class="color__hex">#fbfbfd</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--pantone-306">
+                                            <div class="color__titles">
+                                                <span class="color__name">Pantone 306</span>
+                                                <span class="color__hex">#1db3e7</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--teal-blue">
+                                            <div class="color__titles">
+                                                <span class="color__name">Teal Blue</span>
+                                                <span class="color__hex">#005c79</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--valencia">
+                                            <div class="color__titles">
+                                                <span class="color__name">Valencia</span>
+                                                <span class="color__hex">#d73a49</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--cosmos">
+                                            <div class="color__titles">
+                                                <span class="color__name">Cosmos</span>
+                                                <span class="color__hex">#ffdce0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--eucalyptus">
+                                            <div class="color__titles">
+                                                <span class="color__name">Eucalyptus</span>
+                                                <span class="color__hex">#28a745</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-col l-col--xs-6-of-12 l-col--sm-12-of-12 l-col--md-12-of-12 l-col--lg-6-of-12">
+                                        <div class="color color--snowy-mint">
+                                            <div class="color__titles">
+                                                <span class="color__name">Snowy Mint</span>
+                                                <span class="color__hex">#dcffe4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Font Colors</h4>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="l-row">
+                                            <div class="l-col l-col--xs-12-of-12">
+                                                <div class="color color--neutral-black">
+                                                    <div class="color__titles">
+                                                        <span class="color__name">Neutral Black</span>
+                                                        <span class="color__hex">#3d3d3f</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="l-col l-col--xs-12-of-12">
+                                                <div class="color color--pantone-cool-gray-4">
+                                                    <div class="color__titles">
+                                                        <span class="color__name">Pantone Cool Gray 4</span>
+                                                        <span class="color__hex">#b9b7b9</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="l-col l-col--xs-12-of-12 l-col l-col--md-6-of-12">
-                        <p class="h4">Headings</p>
-                        <h1 class="u-font-primary">Heading One</h1>
-                        <h2 class="u-font-primary">Heading Two</h2>
-                        <h3 class="u-font-primary">Heading Three</h3>
-                        <h4 class="u-font-primary">Heading Four</h4>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
-        <section class="section card">
-            <h3 class="section__title">Card</h3>
-            <div class="section__inner">
-                <div class="o-card">
-                    <div class="o-card__header">
-                        <p class="o-card__title h4">Card Title</p>
-                        <p class="o-card__subtitle h4">Card Subtitle</p>
+        </div>
+        <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12">
+                <section class="section card">
+                    <h3 class="section__title">Card</h3>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">With Title & Subtitle</h4>
+                                <div class="card-bg">
+                                    <div class="o-card">
+                                        <div class="o-card__header">
+                                            <div class="o-card__titles">
+                                                <p class="o-card__title">Card Title</p>
+                                                <p class="o-card__subtitle">Card Subtitle</p>
+                                            </div>
+                                        </div>
+                                        <div class="o-card__body">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">With Title</h4>
+                                <div class="card-bg">
+                                    <div class="o-card">
+                                        <div class="o-card__header">
+                                            <div class="o-card__titles">
+                                                <p class="o-card__title">Card Title</p>
+                                            </div>
+                                        </div>
+                                        <div class="o-card__body">
+                                            <p>Duis ex magna, laoreet eget malesuada at, rhoncus non urna. Curabitur et nulla mauris. Donec rhoncus vel dui ullamcorper molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">With Additional Content on Right Side</h4>
+                                <p>To put content on the right side of the card title:</p>
+                                <ol>
+                                    <li>Apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class, which evenly distributes items in the header on the line.</li>
+                                    <li>Wrap any titles and subtitles in a container div with the class <code>o-card__titles</code>.</li>
+                                </ol>
+                                <div class="card-bg">
+                                    <div class="o-card o-card--evenly-distributed-header">
+                                        <div class="o-card__header">
+                                            <div class="o-card__titles">
+                                                <p class="o-card__title">Card Title</p>
+                                            </div>
+                                            <p class="u-m-zero">Additional Content</p>
+                                        </div>
+                                        <div class="o-card__body">
+                                            <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="o-card__body">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
+        <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                <section class="section buttons">
+                    <h3 class="section__title">Buttons</h3>
+                    <p>The following modifiers apply to all buttons:</p>
+                    <ul>
+                        <li><code>a-btn--heavy</code> makes the button text bold.</li>
+                        <li><code>a-btn--small</code> makes the button small.</li>
+                        <li><code>a-btn--large</code> makes the button large.</li>
+                    </ul>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light u-mt-zero">Primary</h4>
+                                <p>Use the primary button for facilitating the execution of innocuous actions (e.g., opening up a modal window).  The primary button uses the <code>a-btn--primary</code> modifier.</p>
+                                <button type="button" class="a-btn a-btn--primary a-btn--small">Small</button>
+                                <button type="button" class="a-btn a-btn--primary">Normal</button>
+                                <button type="button" class="a-btn a-btn--primary a-btn--large">Large</button>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Danger</h4>
+                                <p>Use the danger button to indicate that an action will result in the removal of information (e.g, unsubscribing from a Platform Event).  The danger button uses the <code>a-btn--danger</code> modifier.</p>
+                                <button type="button" class="a-btn a-btn--danger a-btn--small">Small</button>
+                                <button type="button" class="a-btn a-btn--danger">Normal</button>
+                                <button type="button" class="a-btn a-btn--danger a-btn--large">Large</button>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Success</h4>
+                                <p>Use the success button to indicate that an action will result in the addition of content (e.g, subscribing to a Platform Event).  The success button uses the <code>a-btn--success</code> modifier.</p>
+                                <button type="button" class="a-btn a-btn--success a-btn--small">Small</button>
+                                <button type="button" class="a-btn a-btn--success">Normal</button>
+                                <button type="button" class="a-btn a-btn--success a-btn--large">Large</button>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Transparent</h4>
+                                <p>Use the transparent button when you do not want a colored button.</p>
+                                <button type="button" class="a-btn a-btn--transparent a-btn--small">Small</button>
+                                <button type="button" class="a-btn a-btn--transparent">Normal</button>
+                                <button type="button" class="a-btn a-btn--transparent a-btn--large">Large</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                <section class="section dropdown">
+                    <h3 class="section__title">Dropdown</h3>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <div class="m-dropdown">
+                                    <button type="button" class="a-btn a-btn--primary">
+                                        Show All
+                                        <svg viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
+    <script>
+        (function(){
+            const vrCheckbox = document.querySelector('#js-vr-guides-checkbox');
+            const body = document.body;
+
+            vrCheckbox.addEventListener('click', () => {
+                body.classList.toggle('guides');
+            }, false);
+
+        })();
+    </script>
 </body>
 </html>
