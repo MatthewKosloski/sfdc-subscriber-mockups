@@ -35,15 +35,15 @@
     $shorthand, 
     $step-names, 
     $use-em: false, 
-    $props-map: $ds-spacing-props-map, 
+    $shorthands-map: $ds-spacing-shorthands-map, 
     $step-map: $ds-spacing-step-map
 ) {
-    @include _design-system-spacing($shorthand, $step-names, $use-em, $props-map, $step-map);
+    @include _design-system-spacing($shorthand, $step-names, $use-em, $shorthands-map, $step-map);
 }
 
 @mixin ds-create-spacing-classes {
     @include _design-system-create-spacing-classes(
-        $props-map: $ds-spacing-props-map, 
+        $shorthands-map: $ds-spacing-shorthands-map, 
         $step-map: $ds-spacing-step-map);
 }
 
