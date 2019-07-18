@@ -67,14 +67,6 @@
         $step-map: $ds-spacing-step-map);
 }
 
-@mixin ds-px-to-em($properties, $px, $is-negative: false) {
-    @include _design-system-px-to-em($properties, $px, $is-negative);
-}
-
-@mixin ds-px-to-rem($properties, $px, $is-negative: false) {
-    @include _design-system-px-to-rem($properties, $px, $is-negative);
-}
-
 @mixin ds-init-root-type($font-sizes: (
     $ds-typography-font-size-xs,
     $ds-typography-font-size-lg
