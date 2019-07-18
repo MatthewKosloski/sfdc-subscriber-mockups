@@ -17,17 +17,21 @@
 
 @mixin ds-fluid-type(
     $min-step, 
-    $max-step, 
+    $max-step,
+    $ratio-xs: $ds-typography-ratio-xs,
+    $ratio-lg: $ds-typography-ratio-lg, 
     $min-vw: map-get($ds-layout-breakpoints, sm), 
     $max-vw: map-get($ds-layout-breakpoints, lg)) {
-    @include _design-system-fluid-type($min-step, $max-step, $min-vw, $max-vw);
+    @include _design-system-fluid-type($min-step, $max-step, $ratio-xs, $ratio-lg, $min-vw, $max-vw);
 }
 
 @mixin ds-spacing-em(
     $shorthands, 
     $step-names, 
     $is-important: false,
-    $is-negative: false, 
+    $is-negative: false,
+    $ratio-xs: $ds-typography-ratio-xs,
+    $ratio-lg: $ds-typography-ratio-lg, 
     $shorthands-map: $ds-spacing-shorthands-map, 
     $step-map: $ds-spacing-step-map
 ) {
@@ -35,6 +39,8 @@
     @include _design-system-spacing(
         $shorthands, 
         $step-names,
+        $ratio-xs,
+        $ratio-lg,
         $shorthands-map, 
         $step-map,
         $use-em,
@@ -46,7 +52,9 @@
     $shorthands, 
     $step-names, 
     $is-important: false,
-    $is-negative: false, 
+    $is-negative: false,
+    $ratio-xs: $ds-typography-ratio-xs,
+    $ratio-lg: $ds-typography-ratio-lg, 
     $shorthands-map: $ds-spacing-shorthands-map, 
     $step-map: $ds-spacing-step-map
 ) {
@@ -54,6 +62,8 @@
     @include _design-system-spacing(
         $shorthands, 
         $step-names,
+        $ratio-xs,
+        $ratio-lg,
         $shorthands-map, 
         $step-map,
         $use-em,
@@ -64,7 +74,9 @@
 @mixin ds-create-spacing-classes {
     @include _design-system-create-spacing-classes(
         $shorthands-map: $ds-spacing-shorthands-map, 
-        $step-map: $ds-spacing-step-map);
+        $step-map: $ds-spacing-step-map,
+        $ratio-xs: $ds-typography-ratio-xs,
+        $ratio-lg: $ds-typography-ratio-lg);
 }
 
 @mixin ds-init-root-type($font-sizes: (

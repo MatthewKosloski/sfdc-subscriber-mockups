@@ -38,10 +38,10 @@
     }
 }
 
-@mixin _design-system-fluid-type($min-step, $max-step, $min-vw, $max-vw) {
+@mixin _design-system-fluid-type($min-step, $max-step, $ratio-xs, $ratio-lg, $min-vw, $max-vw) {
     $property: font-size;
-    $min-font-value: _design-system-ms-rem($min-step, $ds-typography-ratio-xs);
-    $max-font-value: _design-system-ms-rem($max-step, $ds-typography-ratio-lg);
+    $min-font-value: _design-system-ms-rem($min-step, $ratio-xs);
+    $max-font-value: _design-system-ms-rem($max-step, $ratio-lg);
     @include _design-system-fluid($property, $min-font-value, $max-font-value, $min-vw, $max-vw);
 }
 
@@ -57,17 +57,17 @@
 }
 
 /// Responsive Vertical Rhythm
-@mixin _design-system-r-vr($properties, $step-xs, $step-lg, $is-em, $is-negative, $is-important) {
+@mixin _design-system-r-vr($properties, $step-xs, $step-lg, $ratio-xs, $ratio-lg, $is-em, $is-negative, $is-important) {
 
     $value-xs: null;
     $value-lg: null;
 
     @if($is-em) {
-        $value-xs: _design-system-vr-em($step-xs, $ds-typography-ratio-xs);
-        $value-lg: _design-system-vr-em($step-lg, $ds-typography-ratio-lg);
+        $value-xs: _design-system-vr-em($step-xs, $ratio-xs);
+        $value-lg: _design-system-vr-em($step-lg, $ratio-lg);
     } @else {
-        $value-xs: _design-system-vr-rem($step-xs, $ds-typography-ratio-xs);
-        $value-lg: _design-system-vr-rem($step-lg, $ds-typography-ratio-lg);
+        $value-xs: _design-system-vr-rem($step-xs, $ratio-xs);
+        $value-lg: _design-system-vr-rem($step-lg, $ratio-lg);
     }
 
     @include _design-system-set-properties($properties, $value-xs, $is-negative, $is-important);
@@ -78,18 +78,20 @@
 }
 
 /// Responsive Vertical Rhythm (EM)
-@mixin _design-system-r-vr-em($properties, $step-xs, $step-lg, $is-negative: false, $is-important: false) {
-    @include _design-system-r-vr($properties, $step-xs, $step-lg, true, $is-negative, $is-important);
+@mixin _design-system-r-vr-em($properties, $step-xs, $step-lg, $ratio-xs, $ratio-lg, $is-negative: false, $is-important: false) {
+    @include _design-system-r-vr($properties, $step-xs, $step-lg, $ratio-xs, $ratio-lg, true, $is-negative, $is-important);
 }
 
 /// Responsive Vertical Rhythm (REM)
-@mixin _design-system-r-vr-rem($properties, $step-xs, $step-lg, $is-negative: false, $is-important: false) {
-    @include _design-system-r-vr($properties, $step-xs, $step-lg, false, $is-negative, $is-important);
+@mixin _design-system-r-vr-rem($properties, $step-xs, $step-lg, $ratio-xs, $ratio-lg, $is-negative: false, $is-important: false) {
+    @include _design-system-r-vr($properties, $step-xs, $step-lg, $ratio-xs, $ratio-lg, false, $is-negative, $is-important);
 }
 
 @mixin _design-system-spacing(
     $shorthands, 
-    $step-names, 
+    $step-names,
+    $ratio-xs,
+    $ratio-lg, 
     $shorthands-map, 
     $step-map,
     $use-em: false, 
@@ -126,19 +128,21 @@
     }
 
     @if($use-em) {
-        @include _design-system-r-vr-em($props, $step-xs, $step-lg, $is-negative, $is-important);
+        @include _design-system-r-vr-em($props, $step-xs, $step-lg, $ratio-xs, $ratio-lg, $is-negative, $is-important);
     } @else {
-        @include _design-system-r-vr-rem($props, $step-xs, $step-lg, $is-negative, $is-important);
+        @include _design-system-r-vr-rem($props, $step-xs, $step-lg, $ratio-xs, $ratio-lg, $is-negative, $is-important);
     }
 }
 
-@mixin _design-system-create-spacing-classes($shorthands-map, $step-map) {
+@mixin _design-system-create-spacing-classes($shorthands-map, $step-map, $ratio-xs, $ratio-lg) {
     @each $shorthand, $props in $shorthands-map {
         @each $step-name, $step-value in $step-map {
             .u-#{$shorthand}-#{$step-name} {
                 @include _design-system-spacing(
                     $shorthand, 
                     $step-name,
+                    $ratio-xs,
+                    $ratio-lg,
                     $shorthands-map, 
                     $step-map,
                     $use-em: false,
