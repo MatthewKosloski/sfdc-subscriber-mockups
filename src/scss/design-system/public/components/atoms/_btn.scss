@@ -1,13 +1,20 @@
 .a-btn {
-    @include ds-spacing-em(px, half);
-    @include ds-spacing-em(py, quarter);
-    font-size: ds-px-to-em(16);
+    @include ds-spacing-em(py, half);
+    @include ds-spacing-em(px, one);
+    display: inline-block;
+    font-size: 1em;
     border-radius: ds-px-to-em(4);
-    border: ds-px-to-em(3) solid transparent;
+    border: ds-px-to-em(1) solid transparent;
     cursor: pointer;
-    transition-property: box-shadow, background-color;
+    transition-property: box-shadow, background-color, color, border-color;
     transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
+    color: $ds-colors-white;
+    user-select: none;
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
     &:focus {
         outline: 0;
     }
@@ -25,42 +32,32 @@
     font-size: ds-px-to-rem(20);
 }
 
-.a-btn--primary,
-.a-btn--danger,
-.a-btn--success {
-    color: $ds-colors-white;
-}
-
-.a-btn--primary {
-    background-color: $ds-colors-neutral-black;
-    &:focus {
-        box-shadow: 0 0 0 ds-px-to-em(3) lighten($ds-colors-neutral-black, 50%);
-    }
-    &:hover {
-        background-color: darken($ds-colors-neutral-black, 10%);
-    }
-}
-
-.a-btn--danger {
-    background-color: $ds-colors-valencia;
-    &:focus {
-        box-shadow: 0 0 0 ds-px-to-em(3) lighten($ds-colors-valencia, 25%);
-    }
-    &:hover {
-        background-color: darken($ds-colors-valencia, 10%);
+@each $button-name, $button-color in $ds-btn-colors-map {
+    .a-btn--#{$button-name} {
+        &.a-btn--outline {
+            background-color: transparent;
+            border: ds-px-to-em(1) solid $button-color;
+            color: $button-color;
+        }
+        &.a-btn--outline:hover:not(:disabled),
+        &.a-btn--selected {
+            border-color: darken($button-color, 10%);
+            color: $ds-colors-white;
+        }
+        &:hover:not(:disabled),
+        &.a-btn--selected:not(:disabled) {
+            background-color: darken($button-color, 10%);
+        }
+        &:focus {
+            box-shadow: 0 0 0 ds-px-to-em(3) lighten($button-color, 25%);
+        }
+        background-color: $button-color;
     }
 }
-
-.a-btn--success {
-    background-color: $ds-colors-eucalyptus;
-    &:focus {
-        box-shadow: 0 0 0 ds-px-to-em(3) lighten($ds-colors-eucalyptus, 35%);
-    }
-    &:hover {
-        background-color: darken($ds-colors-eucalyptus, 10%);
-    }
-}
-
 .a-btn--transparent {
     background-color: transparent;
+    color: $ds-colors-neutral-black;
+    &:hover {
+        background-color: transparent;
+    }
 }
