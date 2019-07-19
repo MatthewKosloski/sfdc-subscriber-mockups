@@ -14,7 +14,7 @@ html {
 }
 
 code {
-    @include ds-spacing-rem(p, quarter);
+    @include ds-spacing-em(p, quarter);
     font-size: ds-px-to-rem(12);
     font-family: "Lucida Console", Monaco, monospace;
     background-color: var(--color-buttermilk);
@@ -22,7 +22,18 @@ code {
     border-radius: 4px;
 }
 
-body.guides {
+a {
+    color: $ds-colors-pantone-306;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+body {
+    background-color: $ds-colors-alabaster;
+}
+
+.guides {
     background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, 0.3) 1px, transparent 1px);
     background-repeat: repeat;
     background-position: left top;
@@ -39,23 +50,23 @@ header {
     background-color: var(--color-seashell);
 }
 
+.icons__container {
+    display: flex;
+    align-items: center;
+}
+
 .section {
     @include ds-spacing-rem(mb, one);
 }
 
 .section__title {
-    @include ds-spacing-rem(pb, half);
-    @include ds-spacing-rem(mb, one);
+    @include ds-spacing-em(pb, half);
+    @include ds-spacing-em(mb, one);
     border-bottom: 1px solid var(--color-alto);
 }
 
 .section__subtitle {
-    @include ds-spacing-rem(mt, two);
-}
-
-.card-bg {
-    @include ds-spacing-em(p, three);
-    background-color: $ds-colors-alabaster;
+    @include ds-spacing-rem(mt, one);
 }
 
 .color {
@@ -71,7 +82,7 @@ header {
 }
 
 .color__titles {
-    @include ds-spacing-rem(ml, one);
+    @include ds-spacing-em(ml, one);
 }
 
 .color__name {

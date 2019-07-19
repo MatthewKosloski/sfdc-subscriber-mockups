@@ -23,6 +23,353 @@
     </header>
     <div class="l-container">
         <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12">
+                <section class="section naming-conventions">
+                    <h3 class="section__title">Naming Conventions</h3>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">General</h4>
+                                <p>CSS class names conform to the BEM (Block-Element-Modifier) naming convention.  BEM's strict naming rules can be found <a href="http://getbem.com/naming/">here</a>.</p>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Prefixes</h4>
+                                <p>CSS class names for component, layout, and utility classes have the following prefixes.</p>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p class="u-font-heavy">Type</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-3-of-12">
+                                        <p class="u-font-heavy">Location</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p class="u-font-heavy">Prefix</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p class="u-font-heavy">Definition</p>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p>Utility</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-3-of-12">
+                                        <code>/public/utils</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>u-</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>Performs an <code>!important</code> function on an element. Such functions include:</p>
+                                        <ul>
+                                            <li>Font Weight</li>
+                                            <li>Margin</li>
+                                            <li>Padding</li>
+                                            <li>Visibility</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p>Layout</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-3-of-12">
+                                        <code>/public/layout</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>l-</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>Integral to the layout of the application.  Layout classes are for things like headers, footers, grids, and containers.
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p>Component (Atom)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-3-of-12">
+                                        <code>/public/components/atoms</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>a-</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>An element of the <a href="http://atomicdesign.bradfrost.com/chapter-2/">Atomic Design Methodology</a>.</p>
+                                        <p>A foundational building block of a user interface.  Examples of atoms are:</p>
+                                        <ul>
+                                            <li>Buttons</li>
+                                            <li>Form Labels</li>
+                                            <li>Inputs</li>
+                                            <li>Badges</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p>Component (Molecule)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-3-of-12">
+                                        <code>/public/components/molecules</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>m-</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>An element of the <a href="http://atomicdesign.bradfrost.com/chapter-2/">Atomic Design Methodology</a>.</p>
+                                        <p>A relatively simple group of UI elements, such as atoms, functioning together as a unit.  Examples of molecules include:</p>
+                                        <ul>
+                                            <li>Dropdown</li>
+                                            <li>Tooltip</li>
+                                            <li>Search Form</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p>Component (Organism)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-3-of-12">
+                                        <code>/public/components/organisms</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>o-</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>An element of the <a href="http://atomicdesign.bradfrost.com/chapter-2/">Atomic Design Methodology</a>.</p>
+                                        <p>A relatively complex user interface component composed of groups of molecules and/or atoms and/or other organisms.  Examples of organisms include:</p>
+                                        <ul>
+                                            <li>Card</li>
+                                            <li>Header</li>
+                                            <li>Footer</li>
+                                            <li>Sidebar</li>
+                                            <li>Timeline</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Spacing Utilities</h4>
+                                <p>Since spacing utilities have many variations and will be used in many places, we use a shorthand naming convention to help keep class names succint.</p>
+                                <p>Spacing utility classes have the syntax <code>u-{shorthand}-{step}</code>, where <code>{shorthand}</code> is a valid key in <code>$ds-spacing-shorthands-map</code> and <code>{step}</code> is a valid key in <code>$ds-spacing-step-map</code>.
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <p class="u-font-heavy">Shorthand</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p class="u-font-heavy">Definition</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p class="u-font-heavy">Example</p>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>m</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>margin</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-m-one</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>mx</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>left and right margin (x-axis)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-mx-half</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>my</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>top and bottom margin (y-axis)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-my-three</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>mt</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>top margin</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-mt-five</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>mr</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>right margin</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-mr-zero</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>mb</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>bottom margin</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-mb-two</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>ml</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>left margin</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-ml-three</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>p</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>padding</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-p-one</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>px</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>left and right padding (x-axis)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-px-half</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>py</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>top and bottom padding (y-axis)</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-py-three</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>pt</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>top padding</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-pt-five</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>pr</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>right padding</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-pr-zero</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>pb</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>bottom padding</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-pb-two</code>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-2-of-12">
+                                        <code>pl</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <p>left padding</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-5-of-12">
+                                        <code>.u-pl-three</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12">
+                                <h4 class="section__subtitle u-font-light">Grid</h4>
+                                <p>The grid uses two main classes, <code>.l-row</code> and <code>.l-col</code>.  The former indicates a row and the latter indicates a column.</p>
+                                <p>To alter the width of a column, you must use a modifier.  The syntax for column modifiers is <code>l-col--{breakpoint}-{width}-of-{columns}</code>, where <code>{breakpoint}</code> is an element in <code>$ds-layout-grid-sizes</code>, <code>{width}</code> is an integer between 1 and <code>{columns}</code>, and <code>{columns}</code> is the value of <code>$ds-layout-grid-cols</code> (the total amount of columns in the grid).</p>
+                                <p>For example, suppose you set <code>$ds-layout-grid-cols</code> to 12, generating a 12-column grid.  Here are some (not all) of the column modifiers that would be generated.</p>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-4-of-12">
+                                        <p class="u-font-heavy">Column Modifier</p>
+                                    </div>
+                                    <div class="l-col l-col--xs-8-of-12">
+                                        <p class="u-font-heavy">Definition</p>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-4-of-12">
+                                        <code>l-col--xs-1-of-12</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-8-of-12">
+                                        <p>Column has a width of <code>1 / 12 = ~8.3%</code> at breakpoint <code>xs</code>.</p>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-4-of-12">
+                                        <code>l-col--sm-3-of-12</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-8-of-12">
+                                        <p>Column has a width of <code>3 / 12 = 25%</code> at breakpoint <code>sm</code>.</p>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-4-of-12">
+                                        <code>l-col--md-6-of-12</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-8-of-12">
+                                        <p>Column has a width of <code>6 / 12 = 50%</code> at breakpoint <code>md</code>.</p>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-4-of-12">
+                                        <code>l-col--lg-12-of-12</code>
+                                    </div>
+                                    <div class="l-col l-col--xs-8-of-12">
+                                        <p>Column has a width of <code>12 / 12 = 100%</code> at breakpoint <code>lg</code>.</p>
+                                    </div>
+                                </div>
+                                <p>As you can see, to obtain the width of the column at a particular breakpoint, simply divide <code>{width}</code> by <code>{column}</code>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="l-row">
             <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
                 <section class="section typography">
                     <h3 class="section__title">Typography</h3>
@@ -156,53 +503,236 @@
                         <div class="l-row">
                             <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
                                 <h4 class="section__subtitle u-font-light">With Subtitle</h4>
-                                <div class="card-bg">
-                                    <div class="o-card">
-                                        <div class="o-card__header">
-                                            <div class="o-card__titles">
-                                                <p class="o-card__title">Card Title</p>
-                                                <p class="o-card__subtitle">Card Subtitle</p>
-                                            </div>
+                                <div class="o-card">
+                                    <div class="o-card__header">
+                                        <div class="o-card__titles">
+                                            <p class="o-card__title">Card Title</p>
+                                            <p class="o-card__subtitle">Card Subtitle</p>
                                         </div>
-                                        <div class="o-card__body">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
-                                        </div>
+                                    </div>
+                                    <div class="o-card__body">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
                                 <h4 class="section__subtitle u-font-light">Without Subtitle</h4>
-                                <div class="card-bg">
-                                    <div class="o-card">
-                                        <div class="o-card__header">
-                                            <div class="o-card__titles">
-                                                <p class="o-card__title">Card Title</p>
-                                            </div>
+                                <div class="o-card">
+                                    <div class="o-card__header">
+                                        <div class="o-card__titles">
+                                            <p class="o-card__title">Card Title</p>
                                         </div>
-                                        <div class="o-card__body">
-                                            <p>Duis ex magna, laoreet eget malesuada at, rhoncus non urna. Curabitur et nulla mauris. Donec rhoncus vel dui ullamcorper molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                        </div>
+                                    </div>
+                                    <div class="o-card__body">
+                                        <p>Duis ex magna, laoreet eget malesuada at, rhoncus non urna. Curabitur et nulla mauris. Donec rhoncus vel dui ullamcorper molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="l-col l-col--xs-12-of-12">
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
                                 <h4 class="section__subtitle u-font-light">With Additional Content on Right Side</h4>
-                                <p>To put content on the right side of the card title:</p>
-                                <ol>
-                                    <li>Apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class, which evenly distributes items in the header on the line.</li>
-                                    <li>Wrap any titles and subtitles in a container div with the class <code>o-card__titles</code>.</li>
-                                </ol>
-                                <div class="card-bg">
-                                    <div class="o-card o-card--evenly-distributed-header">
-                                        <div class="o-card__header">
-                                            <div class="o-card__titles">
-                                                <p class="o-card__title">Card Title</p>
+                                <p>To put content in the bottom of the card body, apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class, which evenly distributes items in the header on the line.
+                                <div class="o-card o-card--evenly-distributed-header">
+                                    <div class="o-card__header">
+                                        <div class="o-card__titles">
+                                            <p class="o-card__title">Card Title</p>
+                                        </div>
+                                        <p class="u-m-zero">Additional Content</p>
+                                    </div>
+                                    <div class="o-card__body">
+                                        <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">With Footer</h4>
+                                <p>To put content in the bottom of the card, simply add a <code>div</code> under the body with a class of <code>o-card__footer</code>.</p>
+                                <div class="o-card">
+                                    <div class="o-card__header">
+                                        <div class="o-card__titles">
+                                            <p class="o-card__title">Card Title</p>
+                                        </div>
+                                    </div>
+                                    <div class="o-card__body">
+                                        <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                        <p>Sed auctor mi arcu, eget pretium lacus interdum et. Nunc metus turpis, hendrerit pellentesque risus ut, congue ultricies massa. Nulla ultrices ante id purus accumsan, vitae dapibus neque ornare. Etiam at dui tristique, auctor odio et, cursus felis. Morbi at arcu eleifend, mattis sem ac, luctus metus.</p>
+                                    </div>
+                                    <div class="o-card__footer">
+                                        <label class="a-label" for="text-input-1">Label</label>
+                                        <div class="u-display-flex">    
+                                            <input class="a-text-input u-mr-one" type="text" id="text-input-1">
+                                            <button type="button" class="a-btn a-btn--success">Subscribe</button>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="o-card__footer">
+                                        <div class="l-row">
+                                            <div class="l-col l-col--xs-12-of-12">
+                                                <label class="a-label" for="text-input-1">Label</label>
                                             </div>
-                                            <p class="u-m-zero">Additional Content</p>
                                         </div>
-                                        <div class="o-card__body">
-                                            <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                        <div class="l-row">
+                                            <div class="l-col l-col--xs-7-of-12">
+                                                <input class="a-text-input u-mr-one" type="text" id="text-input-1">
+                                            </div>
+                                            <div class="l-col l-col--xs-5-of-12">
+                                                <button type="button" class="a-btn a-btn--success">Subscribe</button>
+                                            </div>
                                         </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12">
+                <section class="section buttons">
+                    <h3 class="section__title">Buttons</h3>
+                    <div class="section__inner">
+                        <div class="l-row">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <p>The following modifiers apply to all buttons:</p>
+                                <ul>
+                                    <li><code>a-btn--heavy</code> makes the button text bold.</li>
+                                    <li><code>a-btn--small</code> makes the button small.</li>
+                                    <li><code>a-btn--large</code> makes the button large.</li>
+                                    <li><code>a-btn--outline</code> makes the background transparent with a color outline.</li>
+                                    <li><code>a-btn--selected</code> makes the button appear the same as if it were being hovered.</li>
+                                </ul>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light u-mt-zero">Default</h4>
+                                <p>Use the default button when no other color is suitable. The default button uses the <code>a-btn--default</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--default a-btn--small">Small</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--small a-btn--selected">Small</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--small a-btn--outline">Small</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--default">Normal</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--selected">Normal</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--outline">Normal</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--default a-btn--large">Large</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--large a-btn--selected">Large</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--large a-btn--outline">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light u-mt-zero">Primary</h4>
+                                <p>Use the primary button for facilitating the execution of innocuous actions (e.g., opening up a modal window).  The primary button uses the <code>a-btn--primary</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--primary a-btn--small">Small</button>
+                                        <button type="button" class="a-btn a-btn--primary a-btn--small a-btn--selected">Small</button>
+                                        <button type="button" class="a-btn a-btn--primary a-btn--small a-btn--outline">Small</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--primary">Normal</button>
+                                        <button type="button" class="a-btn a-btn--primary a-btn--selected">Normal</button>
+                                        <button type="button" class="a-btn a-btn--primary a-btn--outline">Normal</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--primary a-btn--large">Large</button>
+                                        <button type="button" class="a-btn a-btn--primary a-btn--large a-btn--selected">Large</button>
+                                        <button type="button" class="a-btn a-btn--primary a-btn--large a-btn--outline">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Danger</h4>
+                                <p>Use the danger button to indicate that an action will result in the removal of information (e.g, unsubscribing from a Platform Event).  The danger button uses the <code>a-btn--danger</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--danger a-btn--small">Small</button>
+                                        <button type="button" class="a-btn a-btn--danger a-btn--small a-btn--selected">Small</button>
+                                        <button type="button" class="a-btn a-btn--danger a-btn--small a-btn--outline">Small</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--danger">Normal</button>
+                                        <button type="button" class="a-btn a-btn--danger a-btn--selected">Normal</button>
+                                        <button type="button" class="a-btn a-btn--danger a-btn--outline">Normal</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--danger a-btn--large">Large</button>
+                                        <button type="button" class="a-btn a-btn--danger a-btn--large a-btn--selected">Large</button>
+                                        <button type="button" class="a-btn a-btn--danger a-btn--large a-btn--outline">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Success</h4>
+                                <p>Use the success button to indicate that an action will result in the addition of content (e.g, subscribing to a Platform Event).  The success button uses the <code>a-btn--success</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--success a-btn--small">Small</button>
+                                        <button type="button" class="a-btn a-btn--success a-btn--small a-btn--selected">Small</button>
+                                        <button type="button" class="a-btn a-btn--success a-btn--small a-btn--outline">Small</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--success">Normal</button>
+                                        <button type="button" class="a-btn a-btn--success a-btn--selected">Normal</button>
+                                        <button type="button" class="a-btn a-btn--success a-btn--outline">Normal</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--success a-btn--large">Large</button>
+                                        <button type="button" class="a-btn a-btn--success a-btn--large a-btn--selected">Large</button>
+                                        <button type="button" class="a-btn a-btn--success a-btn--large a-btn--outline">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Transparent</h4>
+                                <p>Use the transparent button when you do not want a colored button.  The transparent button uses the <code>a-btn--transparent</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--small">Small</button>
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--small a-btn--selected">Small</button>
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--small a-btn--outline">Small</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--transparent">Normal</button>
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--selected">Normal</button>
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--outline">Normal</button>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--large">Large</button>
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--large a-btn--selected">Large</button>
+                                        <button type="button" class="a-btn a-btn--transparent a-btn--large a-btn--outline">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Disabled</h4>
+                                <p>All of the button variants can be disabled by simply setting the <code>disabled</code> attribute on the element to <code>true</code>.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <button type="button" class="a-btn a-btn--default a-btn--small" disabled>Normal Disabled</button>
+                                        <button type="button" class="a-btn a-btn--default a-btn--small a-btn--outline" disabled>Outline Disabled</button>
                                     </div>
                                 </div>
                             </div>
@@ -213,62 +743,237 @@
         </div>
         <div class="l-row">
             <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
-                <section class="section buttons">
-                    <h3 class="section__title">Buttons</h3>
-                    <p>The following modifiers apply to all buttons:</p>
-                    <ul>
-                        <li><code>a-btn--heavy</code> makes the button text bold.</li>
-                        <li><code>a-btn--small</code> makes the button small.</li>
-                        <li><code>a-btn--large</code> makes the button large.</li>
-                    </ul>
+                <section class="section dropdown">
+                    <h3 class="section__title">Dropdown</h3>
                     <div class="section__inner">
-                        <div class="l-row">
+                        <div class="l-row u-mb-one">
                             <div class="l-col l-col--xs-12-of-12">
-                                <h4 class="section__subtitle u-font-light u-mt-zero">Primary</h4>
-                                <p>Use the primary button for facilitating the execution of innocuous actions (e.g., opening up a modal window).  The primary button uses the <code>a-btn--primary</code> modifier.</p>
-                                <button type="button" class="a-btn a-btn--primary a-btn--small">Small</button>
-                                <button type="button" class="a-btn a-btn--primary">Normal</button>
-                                <button type="button" class="a-btn a-btn--primary a-btn--large">Large</button>
+                                <p>Dropdown triggers are buttons, so any of the aforementioned button modifiers can be applied to dropdowns.  For example, the following two dropdowns have modifiers <code>a-btn--primary</code> and <code>a-btn--outline</code>.</p>
+                                <p>The expansion and contraction of the dropdown is controlled by the boolean value of <code>aria-expanded</code>, which can be changed via JavaScript.</p>
                             </div>
-                            <div class="l-col l-col--xs-12-of-12">
-                                <h4 class="section__subtitle u-font-light">Danger</h4>
-                                <p>Use the danger button to indicate that an action will result in the removal of information (e.g, unsubscribing from a Platform Event).  The danger button uses the <code>a-btn--danger</code> modifier.</p>
-                                <button type="button" class="a-btn a-btn--danger a-btn--small">Small</button>
-                                <button type="button" class="a-btn a-btn--danger">Normal</button>
-                                <button type="button" class="a-btn a-btn--danger a-btn--large">Large</button>
+                        </div>
+                        <div class="l-row u-mb-one">
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Contracted</h4>
+                                <div class="m-dropdown">
+                                    <button class="a-btn a-btn--primary a-btn--outline" type="button" id="show-all-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+                                        Choices <span class="m-dropdown__current-selection"></span>
+                                        <svg class="m-dropdown__arrow" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="m-dropdown__list" aria-labelledby="show-all-dropdown-btn">
+                                        <li class="m-dropdown__list-item">
+                                            <a href="#">Theta</a>
+                                        </li>
+                                        <li class="m-dropdown__list-item m-dropdown__list-item--selected">
+                                            <a href="#">Epsilon</a>
+                                        </li>
+                                        <li class="m-dropdown__list-item">
+                                            <a href="#">Sigma</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="l-col l-col--xs-12-of-12">
-                                <h4 class="section__subtitle u-font-light">Success</h4>
-                                <p>Use the success button to indicate that an action will result in the addition of content (e.g, subscribing to a Platform Event).  The success button uses the <code>a-btn--success</code> modifier.</p>
-                                <button type="button" class="a-btn a-btn--success a-btn--small">Small</button>
-                                <button type="button" class="a-btn a-btn--success">Normal</button>
-                                <button type="button" class="a-btn a-btn--success a-btn--large">Large</button>
-                            </div>
-                            <div class="l-col l-col--xs-12-of-12">
-                                <h4 class="section__subtitle u-font-light">Transparent</h4>
-                                <p>Use the transparent button when you do not want a colored button.  The transparent button uses the <code>a-btn--transparent</code> modifier.</p>
-                                <button type="button" class="a-btn a-btn--transparent a-btn--small">Small</button>
-                                <button type="button" class="a-btn a-btn--transparent">Normal</button>
-                                <button type="button" class="a-btn a-btn--transparent a-btn--large">Large</button>
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Expanded</h4>
+                                <div class="m-dropdown">
+                                    <button class="a-btn a-btn--primary a-btn--outline a-btn--selected" type="button" id="show-all-dropdown-btn" aria-haspopup="true" aria-expanded="true">
+                                        Choices <span class="m-dropdown__current-selection"></span>
+                                        <svg class="m-dropdown__arrow" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="m-dropdown__list" aria-labelledby="show-all-dropdown-btn">
+                                        <li class="m-dropdown__list-item">
+                                            <a href="#">Theta</a>
+                                        </li>
+                                        <li class="m-dropdown__list-item m-dropdown__list-item--selected">
+                                            <a href="#">Epsilon</a>
+                                        </li>
+                                        <li class="m-dropdown__list-item">
+                                            <a href="#">Sigma</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
             <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
-                <section class="section dropdown">
-                    <h3 class="section__title">Dropdown</h3>
+                <section class="section icons">
+                    <h3 class="section__title">Icons</h3>
+                    <p>All icons are from GitHub's <a href="https://octicons.github.com/">Octicons</a> pack. They are all very small SVGs, so they can be embedded directly into HTML.</p>
                     <div class="section__inner">
-                        <div class="l-row">
-                            <div class="l-col l-col--xs-12-of-12">
-                                <div class="m-dropdown">
-                                    <button type="button" class="a-btn a-btn--primary">
-                                        Show All
-                                        <svg viewBox="0 0 10 16" version="1.1" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path>
-                                        </svg>
-                                    </button>
+                        <div class="l-row u-mb-one">
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Chevron</h4>
+                                <div class="icons__container">
+                                    <svg class="u-mr-one" height="64" viewBox="0 0 10 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path></svg>
+                                    <svg height="32" viewBox="0 0 10 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path></svg>
                                 </div>
+                            </div>
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Eye</h4>
+                                <div class="icons__container">
+                                    <svg class="u-mr-one" height="64" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                                    <svg height="32" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-row u-mb-one">
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Ellipses</h4>
+                                <div class="icons__container">
+                                    <svg class="u-mr-one" width="64" viewBox="0 0 13 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path></svg>
+                                    <svg width="32" viewBox="0 0 13 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path></svg>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Arrow</h4>
+                                <div class="icons__container">
+                                    <svg class="u-mr-one" width="64" viewBox="0 0 10 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M5 3L0 9h3v4h4V9h3L5 3z"></path></svg>
+                                    <svg width="32" viewBox="0 0 10 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M5 3L0 9h3v4h4V9h3L5 3z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12">
+                <section class="section badges">
+                    <h3 class="section__title">Badges</h3>
+                    <div class="section__inner">
+                        <div class="l-row u-mb-one">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <p>The following modifiers apply to all badges:</p>
+                                <ul>
+                                    <li><code>a-badge--heavy</code> makes the badge text bold.</li>
+                                    <li><code>a-badge--small</code> makes the badge small.</li>
+                                    <li><code>a-badge--large</code> makes the badge large.</li>
+                                    <li><code>a-badge--outline</code> makes the background transparent with a color outline.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="l-row u-mb-one">
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Default</h4>
+                                <p>The default badge uses the <code>a-badge--default</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--default a-badge--small">Small</div>
+                                        <div class="a-badge a-badge--default a-badge--small a-badge--heavy">Small</div>
+                                        <div class="a-badge a-badge--default a-badge--small a-badge--outline">Small</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--default">Normal</div>
+                                        <div class="a-badge a-badge--default a-badge--heavy">Normal</div>
+                                        <div class="a-badge a-badge--default a-badge--outline">Normal</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--default a-badge--large">Large</div>
+                                        <div class="a-badge a-badge--default a-badge--large a-badge--heavy">Large</div>
+                                        <div class="a-badge a-badge--default a-badge--large a-badge--outline">Large</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Primary</h4>
+                                <p>The primary badge uses the <code>a-badge--primary</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--primary a-badge--small">Small</div>
+                                        <div class="a-badge a-badge--primary a-badge--small a-badge--heavy">Small</div>
+                                        <div class="a-badge a-badge--primary a-badge--small a-badge--outline">Small</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--primary">Normal</div>
+                                        <div class="a-badge a-badge--primary a-badge--heavy">Normal</div>
+                                        <div class="a-badge a-badge--primary a-badge--outline">Normal</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--primary a-badge--large">Large</div>
+                                        <div class="a-badge a-badge--primary a-badge--large a-badge--heavy">Large</div>
+                                        <div class="a-badge a-badge--primary a-badge--large a-badge--outline">Large</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Danger</h4>
+                                <p>The danger badge uses the <code>a-badge--danger</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--danger a-badge--small">Small</div>
+                                        <div class="a-badge a-badge--danger a-badge--small a-badge--heavy">Small</div>
+                                        <div class="a-badge a-badge--danger a-badge--small a-badge--outline">Small</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--danger">Normal</div>
+                                        <div class="a-badge a-badge--danger a-badge--heavy">Normal</div>
+                                        <div class="a-badge a-badge--danger a-badge--outline">Normal</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--danger a-badge--large">Large</div>
+                                        <div class="a-badge a-badge--danger a-badge--large a-badge--heavy">Large</div>
+                                        <div class="a-badge a-badge--danger a-badge--large a-badge--outline">Large</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col l-col--xs-6-of-12">
+                                <h4 class="section__subtitle u-font-light">Success</h4>
+                                <p>The success badge uses the <code>a-badge--success</code> modifier.</p>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--success a-badge--small">Small</div>
+                                        <div class="a-badge a-badge--success a-badge--small a-badge--heavy">Small</div>
+                                        <div class="a-badge a-badge--success a-badge--small a-badge--outline">Small</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--success">Normal</div>
+                                        <div class="a-badge a-badge--success a-badge--heavy">Normal</div>
+                                        <div class="a-badge a-badge--success a-badge--outline">Normal</div>
+                                    </div>
+                                </div>
+                                <div class="l-row u-mb-one">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <div class="a-badge a-badge--success a-badge--large">Large</div>
+                                        <div class="a-badge a-badge--success a-badge--large a-badge--heavy">Large</div>
+                                        <div class="a-badge a-badge--success a-badge--large a-badge--outline">Large</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="l-row">
+            <div class="l-col l-col--xs-12-of-12">
+                <section class="section text-inputs">
+                    <h3 class="section__title">Text Inputs</h3>
+                    <div class="section__inner">
+                        <div class="l-row u-mb-one">
+                            <div class="l-col l-col--xs-12-of-12">
+                                <label class="a-label" for="text-input-1">Label</label>
+                                <input class="a-text-input u-mr-one" type="text" id="text-input-1">
+                                <button class="a-btn a-btn--default a-btn--success">Subscribe</button>
                             </div>
                         </div>
                     </div>
