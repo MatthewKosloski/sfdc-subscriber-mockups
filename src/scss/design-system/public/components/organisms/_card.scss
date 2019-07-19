@@ -5,19 +5,29 @@
 
 .o-card {
     width: 100%;
-    border-radius: 6px;
+    border-radius: ds-px-to-em(6);
     border: 2px solid $ds-colors-gallery;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 ds-px-to-em(3) ds-px-to-em(5) 0 rgba(0, 0, 0, 0.05);
 }
 
 .o-card__header,
-.o-card__body {
-    @include ds-spacing-rem(px, one);
-    @include ds-spacing-rem(py, (one, half));
+.o-card__body,
+.o-card__footer {
+    @include ds-spacing-em(px, one);
+}
+
+.o-card__body,
+.o-card__footer {
+    @include ds-spacing-em(py, one);
 }
 
 .o-card__header {
+    @include ds-spacing-em(py, half);
     border-bottom: 2px solid $ds-colors-gallery;
+}
+
+.o-card__footer {
+    border-top: 2px solid $ds-colors-gallery;
 }
 
 .o-card--evenly-distributed-header {
@@ -49,7 +59,9 @@
     overflow-y: auto;
     height: 100%;
     p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
         color: $ds-colors-neutral-black;
-        margin-bottom: 0;
     }
 }
