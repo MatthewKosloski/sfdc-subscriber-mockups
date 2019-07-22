@@ -501,83 +501,86 @@
                     <h3 class="section__title">Card</h3>
                     <div class="section__inner">
                         <div class="l-row">
-                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
-                                <h4 class="section__subtitle u-font-light">With Subtitle</h4>
-                                <div class="o-card">
-                                    <div class="o-card__header">
-                                        <div class="o-card__titles">
-                                            <p class="o-card__title">Card Title</p>
-                                            <p class="o-card__subtitle">Card Subtitle</p>
+                            <div class="l-col l-col--xs-6-of-12 l-col-md-6-of-12">
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <h4 class="section__subtitle u-font-light">With Subtitle</h4>
+                                        <div>
+                                            <div class="o-card">
+                                                <div class="o-card__header">
+                                                    <div class="o-card__titles">
+                                                        <p class="o-card__title">Card Title</p>
+                                                        <p class="o-card__subtitle">Card Subtitle</p>
+                                                    </div>
+                                                </div>
+                                                <div class="o-card__body">
+                                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="o-card__body">
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <h4 class="section__subtitle u-font-light">Without Subtitle</h4>
+                                        <div>
+                                            <div class="o-card">
+                                                <div class="o-card__header">
+                                                    <div class="o-card__titles">
+                                                        <p class="o-card__title">Card Title</p>
+                                                    </div>
+                                                </div>
+                                                <div class="o-card__body">
+                                                    <p>Duis ex magna, laoreet eget malesuada at, rhoncus non urna. Curabitur et nulla mauris. Donec rhoncus vel dui ullamcorper molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <h4 class="section__subtitle u-font-light">With Additional Content on Right Side</h4>
+                                        <p>To put content in the bottom of the card body, apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class, which evenly distributes items in the header on the line.
+                                        <div>
+                                            <div class="o-card o-card--evenly-distributed-header">
+                                                <div class="o-card__header">
+                                                    <div class="o-card__titles">
+                                                        <p class="o-card__title">Card Title</p>
+                                                    </div>
+                                                    <p class="u-m-zero">Additional Content</p>
+                                                </div>
+                                                <div class="o-card__body">
+                                                    <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
-                                <h4 class="section__subtitle u-font-light">Without Subtitle</h4>
-                                <div class="o-card">
-                                    <div class="o-card__header">
-                                        <div class="o-card__titles">
-                                            <p class="o-card__title">Card Title</p>
-                                        </div>
-                                    </div>
-                                    <div class="o-card__body">
-                                        <p>Duis ex magna, laoreet eget malesuada at, rhoncus non urna. Curabitur et nulla mauris. Donec rhoncus vel dui ullamcorper molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
-                                <h4 class="section__subtitle u-font-light">With Additional Content on Right Side</h4>
-                                <p>To put content in the bottom of the card body, apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class, which evenly distributes items in the header on the line.
-                                <div class="o-card o-card--evenly-distributed-header">
-                                    <div class="o-card__header">
-                                        <div class="o-card__titles">
-                                            <p class="o-card__title">Card Title</p>
-                                        </div>
-                                        <p class="u-m-zero">Additional Content</p>
-                                    </div>
-                                    <div class="o-card__body">
-                                        <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="l-col l-col--xs-12-of-12 l-col--md-6-of-12">
+                            <div class="l-col l-col--xs-6-of-12 l-col-md-6-of-12">
                                 <h4 class="section__subtitle u-font-light">With Footer</h4>
                                 <p>To put content in the bottom of the card, simply add a <code>div</code> under the body with a class of <code>o-card__footer</code>.</p>
-                                <div class="o-card">
-                                    <div class="o-card__header">
-                                        <div class="o-card__titles">
-                                            <p class="o-card__title">Card Title</p>
-                                        </div>
-                                    </div>
-                                    <div class="o-card__body">
-                                        <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
-                                        <p>Sed auctor mi arcu, eget pretium lacus interdum et. Nunc metus turpis, hendrerit pellentesque risus ut, congue ultricies massa. Nulla ultrices ante id purus accumsan, vitae dapibus neque ornare. Etiam at dui tristique, auctor odio et, cursus felis. Morbi at arcu eleifend, mattis sem ac, luctus metus.</p>
-                                    </div>
-                                    <div class="o-card__footer">
-                                        <label class="a-label" for="text-input-1">Label</label>
-                                        <div class="u-display-flex">    
-                                            <input class="a-text-input u-mr-one" type="text" id="text-input-1">
-                                            <button type="button" class="a-btn a-btn--success">Subscribe</button>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="o-card__footer">
-                                        <div class="l-row">
-                                            <div class="l-col l-col--xs-12-of-12">
-                                                <label class="a-label" for="text-input-1">Label</label>
+                                <div>
+                                    <div class="o-card">
+                                        <div class="o-card__header">
+                                            <div class="o-card__titles">
+                                                <p class="o-card__title">Card Title</p>
                                             </div>
                                         </div>
-                                        <div class="l-row">
-                                            <div class="l-col l-col--xs-7-of-12">
+                                        <div class="o-card__body">
+                                            <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                            <p>Sed auctor mi arcu, eget pretium lacus interdum et. Nunc metus turpis, hendrerit pellentesque risus ut, congue ultricies massa. Nulla ultrices ante id purus accumsan, vitae dapibus neque ornare. Etiam at dui tristique, auctor odio et, cursus felis. Morbi at arcu eleifend, mattis sem ac, luctus metus.</p>
+                                            <p>Maecenas malesuada ante condimentum dui ullamcorper, at rutrum nunc tincidunt. Curabitur sed interdum turpis. Integer aliquet dui at nunc euismod feugiat. Donec pharetra magna sed pharetra tempus. Vestibulum odio orci, hendrerit ac gravida in, cursus eu dui. Maecenas id maximus tortor. Curabitur a augue tincidunt, porttitor ex eu, auctor magna. Proin condimentum rhoncus tempus. Nullam gravida, dui sed vulputate efficitur, odio massa rhoncus mi, sed ullamcorper enim urna at odio. Duis a purus et libero pretium rutrum pulvinar in orci.</p>
+                                            <p>venenatis risus a vehicula viverra. Donec quis metus fringilla, tincidunt ligula maximus, aliquet dui. Maecenas pharetra tincidunt purus vel vulputate. Maecenas ultricies eros odio, eget molestie urna mollis tincidunt. Curabitur tincidunt velit vel leo efficitur, quis facilisis erat molestie. Vestibulum mattis justo et vestibulum suscipit.</p>
+                                        </div>
+                                        <div class="o-card__footer">
+                                            <label class="a-label" for="text-input-1">Label</label>
+                                            <div class="u-display-flex">    
                                                 <input class="a-text-input u-mr-one" type="text" id="text-input-1">
-                                            </div>
-                                            <div class="l-col l-col--xs-5-of-12">
                                                 <button type="button" class="a-btn a-btn--success">Subscribe</button>
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
