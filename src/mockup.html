@@ -10,20 +10,20 @@
 </head>
 <body>
     <div class="l-container">
-        <div class="l-row">
-            <div class="l-col l-col--lg-8-of-12 u-pl-two u-pt-two u-pb-two">
+        <div class="l-container__left">
+            <main class="o-main">
                 <div class="l-row timeline" style="min-height:60vh;">
                     <div class="l-col l-col--xs-12-of-12">
-                        <div class="o-card o-card--evenly-distributed-header o-card--full-height">
+                        <div class="o-card o-card--evenly-distributed-header">
                             <div class="o-card__header">
                                 <div class="o-card__titles">
-                                    <p class="o-card__title">Timeline</p>
+                                    <h2 class="o-card__title h3">Timeline</h2>
                                     <p class="o-card__subtitle">past 60 seconds of activity</p>
                                 </div>
                                 <p class="u-m-zero">mm/dd/yy HH:MM:SS &mdash; mm/dd/yy HH:MM:SS</p>
                             </div>
                             <div class="o-card__body">
-                                <div style="display:flex;align-items:center;justify-content:center;">
+                                <div style="display:flex;align-items:center;justify-content:center;height:100%;">
                                     <p>A multi-series, time series D3.js chart will go here.</p>
                                 </div>
                             </div>
@@ -32,15 +32,80 @@
                 </div>
                 <div class="l-row u-pt-two" style="min-height:40vh;">
                     <div class="l-col l-col--xs-6-of-12">
-                        <div class="o-card">
+                        <div class="o-card o-card--constrict-body-height o-card--no-padded-body">
                             <div class="o-card__header">
                                 <div class="o-card__titles">
-                                    <p class="o-card__title">Subscriptions</p>
+                                    <h2 class="o-card__title h3">Subscriptions</h2>
                                 </div>
+                                <div class="a-badge a-badge--default a-badge--outline a-badge--heavy a-badge--small u-ml-half">4</div>
                             </div>
                             <div class="o-card__body">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
-                                <p>Proin nunc turpis, pellentesque tincidunt massa a, bibendum porta magna. Proin nulla nisl, sollicitudin at lectus pharetra, dignissim dapibus odio. Donec eget pulvinar velit, id mattis arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque volutpat eu libero vel bibendum. Nulla non urna non tellus volutpat finibus. Sed eu iaculis nulla. Phasellus non ante porttitor, consectetur purus nec, hendrerit dui. Duis et neque risus. Nulla ultrices molestie neque, id ornare est aliquet id. Aenean lacinia aliquet risus, eu auctor magna egestas sit amet.</p>
+                                <ul class="o-card-list-items">
+                                    <li class="m-card-list-item">
+                                        <div class="m-card-list-item__left">
+                                            <span class="m-card-list-item__dot" style="background-color: rgba(43, 46, 106, 1)"></span>
+                                            <div class="m-card-list-item__titles">
+                                                <h3 class="m-card-list-item__title h4">
+                                                    Product_License_Expiration_Event__e
+                                                </h3>
+                                                <p class="m-card-list-item__subtitle">
+                                                    for 1 minute
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="m-card-list-item__right">
+                                            <button type="button" class="a-btn a-btn--danger a-btn--small">Unsubscribe</button>
+                                        </div>
+                                    </li>
+                                    <li class="m-card-list-item">
+                                        <div class="m-card-list-item__left">
+                                            <span class="m-card-list-item__dot" style="background-color: rgba(255, 193, 24, 1)"></span>
+                                            <div class="m-card-list-item__titles">
+                                                <h3 class="m-card-list-item__title h4">
+                                                    DataCenter_Exception_Event__e
+                                                </h3>
+                                                <p class="m-card-list-item__subtitle">
+                                                    for 2 minutes
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="m-card-list-item__right">
+                                            <button type="button" class="a-btn a-btn--danger a-btn--small">Unsubscribe</button>
+                                        </div>
+                                    </li>
+                                    <li class="m-card-list-item">
+                                        <div class="m-card-list-item__left">
+                                            <span class="m-card-list-item__dot" style="background-color: rgba(0, 237, 188, 1)"></span>
+                                            <div class="m-card-list-item__titles">
+                                                <h3 class="m-card-list-item__title h4">
+                                                    DataCenter_StatusCode_Change_Event__e
+                                                </h3>
+                                                <p class="m-card-list-item__subtitle">
+                                                    for 9 minutes
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="m-card-list-item__right">
+                                            <button type="button" class="a-btn a-btn--danger a-btn--small">Unsubscribe</button>
+                                        </div>
+                                    </li>
+                                    <li class="m-card-list-item">
+                                        <div class="m-card-list-item__left">
+                                            <span class="m-card-list-item__dot" style="background-color: rgba(149, 62, 189, 1)"></span>
+                                            <div class="m-card-list-item__titles">
+                                                <h3 class="m-card-list-item__title h4">
+                                                    Client_Health_Change_Event__e
+                                                </h3>
+                                                <p class="m-card-list-item__subtitle">
+                                                    for 13 minutes
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="m-card-list-item__right">
+                                            <button type="button" class="a-btn a-btn--danger a-btn--small">Unsubscribe</button>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="o-card__footer">
                                 <label class="a-label" for="text-input-1">Event API Name</label>
@@ -52,24 +117,72 @@
                         </div>
                     </div>
                     <div class="l-col l-col--xs-6-of-12">
-                        <div class="o-card">
+                        <div class="o-card o-card--full-body-height o-card--no-padded-body">
                             <div class="o-card__header">
                                 <div class="o-card__titles">
-                                    <p class="o-card__title">Trends</p>
+                                    <h2 class="o-card__title h3">Trends</h2>
                                 </div>
                             </div>
                             <div class="o-card__body">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique necessitatibus illum eaque dolorem quo aliquam?</p>
+                                <ul class="o-card-list-items">
+                                    <li class="m-card-list-item">
+                                        <div class="m-card-list-item__left">
+                                            <span class="m-card-list-item__dot" style="background-color: rgba(255, 193, 24, 1)"></span>
+                                            <div class="m-card-list-item__titles">
+                                                <h3 class="m-card-list-item__title h4">
+                                                    DataCenter_Exception_Event__e
+                                                </h3>
+                                                <p class="m-card-list-item__subtitle">
+                                                    since 0 minutes ago
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="m-card-list-item__right">
+                                            <div class="a-badge a-badge--success-light a-badge--heavy">
+                                                <svg class="u-mr-quarter" viewBox="0 0 10 13" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M5 3L0 9h3v4h4V9h3L5 3z" fill="#28a745"></path></svg>
+                                                23
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-card-list-item">
+                                        <div class="m-card-list-item__left">
+                                            <span class="m-card-list-item__dot" style="background-color: rgba(0, 237, 188, 1)"></span>
+                                            <div class="m-card-list-item__titles">
+                                                <h3 class="m-card-list-item__title h4">
+                                                    DataCenter_StatusCode_Change_Event__e
+                                                </h3>
+                                                <p class="m-card-list-item__subtitle">
+                                                    since 2 minutes ago
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="m-card-list-item__right">
+                                            <div class="a-badge a-badge--danger-light a-badge--heavy">
+                                                <svg class="u-mr-quarter" viewBox="0 0 10 13" version="1.1" aria-hidden="true"><path fill-rule="evenodd" fill="#D73A49" d="M7 7V3H3v4H0l5 6 5-6H7z"></path></svg>
+                                                6
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="l-col l-col--lg-4-of-12">
-                <aside>
-                    <p>[Event Log goes here]</p>
-                </aside>
-            </div>
+            </main>
+        </div>
+        <div class="l-container__right">
+            <aside class="o-sidebar">
+                <div class="l-row">
+                    <div class="l-col l-col--xs-6-of-12">
+                        <div class="o-sidebar__header">
+                            <div class="o-sidebar__titles">
+                                <h2 class="o-sidebar__title h3">Event Log</h2>
+                            </div>
+                            <div class="a-badge a-badge--default a-badge--outline a-badge--heavy a-badge--small u-ml-half">57</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 </body>
