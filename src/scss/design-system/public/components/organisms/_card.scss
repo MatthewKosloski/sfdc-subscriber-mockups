@@ -28,9 +28,11 @@
 .o-card__header {
     @include ds-spacing-em(py, half);
     border-bottom: ds-px-to-em(1) solid $ds-colors-gallery;
+    display: flex;
+    align-items: center;
 }
 
-.o-card__body {
+.o-card--constricted-body .o-card__body {
     max-height: 375px;
 }
 
@@ -40,14 +42,12 @@
 
 .o-card--evenly-distributed-header {
     .o-card__header {
-        @include ds-breakpoint(md) {
-            flex-direction: row;
-            align-items: center;
-        }
-        flex-direction: column;
-        display: flex;
         justify-content: space-between;
     }
+}
+
+.o-card__titles {
+    display: inline-block;
 }
 
 .o-card__title {
