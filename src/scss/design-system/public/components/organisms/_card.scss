@@ -28,6 +28,10 @@
     border-bottom: ds-px-to-em(1) solid $ds-colors-gallery;
 }
 
+.o-card__body {
+    max-height: 375px;
+}
+
 .o-card__footer {
     border-top: ds-px-to-em(1) solid $ds-colors-gallery;
 }
