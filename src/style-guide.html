@@ -499,6 +499,13 @@
             <div class="l-col l-col--xs-12-of-12">
                 <section class="section card">
                     <h3 class="section__title">Card</h3>
+                    <p>The following modifiers apply to all cards:</p>
+                    <ul>
+                        <li><code>o-card--constrict-body-height</code> constricts the height of the card's body to a pixel value.</li>
+                        <li><code>o-card--full-body-height</code> constricts the height to 100% of the parent element's height.</li>
+                        <li><code>o-card--no-padded-body</code> removes the default padding from the body.</li>
+                        <li><code>o-card--evenly-distributed-header</code> evenly distributes items in the header on the line.</li>
+                    </ul>
                     <div class="section__inner">
                         <div class="l-row">
                             <div class="l-col l-col--xs-6-of-12 l-col-md-6-of-12">
@@ -509,7 +516,7 @@
                                             <div class="o-card">
                                                 <div class="o-card__header">
                                                     <div class="o-card__titles">
-                                                        <p class="o-card__title">Card Title</p>
+                                                        <p class="o-card__title h3">Card Title</p>
                                                         <p class="o-card__subtitle">Card Subtitle</p>
                                                     </div>
                                                 </div>
@@ -527,7 +534,7 @@
                                             <div class="o-card">
                                                 <div class="o-card__header">
                                                     <div class="o-card__titles">
-                                                        <p class="o-card__title">Card Title</p>
+                                                        <p class="o-card__title h3">Card Title</p>
                                                     </div>
                                                 </div>
                                                 <div class="o-card__body">
@@ -540,12 +547,12 @@
                                 <div class="l-row">
                                     <div class="l-col l-col--xs-12-of-12">
                                         <h4 class="section__subtitle u-font-light">With Additional Content on Right Side</h4>
-                                        <p>To put content in the bottom of the card body, apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class, which evenly distributes items in the header on the line.
+                                        <p>To put content in the bottom of the card body, apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class.</p>
                                         <div>
                                             <div class="o-card o-card--evenly-distributed-header">
                                                 <div class="o-card__header">
                                                     <div class="o-card__titles">
-                                                        <p class="o-card__title">Card Title</p>
+                                                        <p class="o-card__title h3">Card Title</p>
                                                     </div>
                                                     <p class="u-m-zero">Additional Content</p>
                                                 </div>
@@ -561,10 +568,10 @@
                                 <h4 class="section__subtitle u-font-light">With Footer</h4>
                                 <p>To put content in the bottom of the card, simply add a <code>div</code> under the body with a class of <code>o-card__footer</code>.</p>
                                 <div>
-                                    <div class="o-card">
+                                    <div class="o-card o-card--constrict-body-height">
                                         <div class="o-card__header">
                                             <div class="o-card__titles">
-                                                <p class="o-card__title">Card Title</p>
+                                                <p class="o-card__title h3">Card Title</p>
                                             </div>
                                         </div>
                                         <div class="o-card__body">
