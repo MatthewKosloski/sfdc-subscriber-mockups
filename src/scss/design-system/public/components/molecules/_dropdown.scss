@@ -76,18 +76,21 @@
     color: darken($ds-colors-pantone-cool-gray-4, 10%);
 }
 
-@each $button-name, $button-color in $ds-btn-colors-map {
+@each $button-name, $colors-map in $ds-btn-colors-map {
+    $background-color: map-get($colors-map, background-color);
+    $color: map-get($colors-map, color);
+
     .m-dropdown {
         > .a-btn--#{$button-name} {
             &.a-btn--outline {
                 .m-dropdown__arrow {
-                    fill: $button-color;
+                    fill: $background-color;
                 }
             }
             &.a-btn--outline:hover,
             &.a-btn--selected {
                 .m-dropdown__arrow {
-                    fill: $ds-colors-white;
+                    fill: $color;
                 }
             }
         }

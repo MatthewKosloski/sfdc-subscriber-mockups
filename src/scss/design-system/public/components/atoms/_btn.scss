@@ -32,28 +32,32 @@
     font-size: ds-px-to-rem(20);
 }
 
-@each $button-name, $button-color in $ds-btn-colors-map {
+@each $button-name, $colors-map in $ds-btn-colors-map {
+    $background-color: map-get($colors-map, background-color);
+    $color: map-get($colors-map, color);
+
     .a-btn--#{$button-name} {
         &.a-btn--outline {
             background-color: transparent;
-            border: ds-px-to-em(1) solid $button-color;
-            color: $button-color;
+            border: ds-px-to-em(1) solid $background-color;
+            color: $background-color;
         }
         &.a-btn--outline:hover:not(:disabled),
         &.a-btn--selected {
-            border-color: darken($button-color, 10%);
-            color: $ds-colors-white;
+            border-color: darken($background-color, 10%);
+            color: $color;
         }
         &:hover:not(:disabled),
         &.a-btn--selected:not(:disabled) {
-            background-color: darken($button-color, 10%);
+            background-color: darken($background-color, 10%);
         }
         &:focus {
-            box-shadow: 0 0 0 ds-px-to-em(3) lighten($button-color, 25%);
+            box-shadow: 0 0 0 ds-px-to-em(3) lighten($background-color, 25%);
         }
-        background-color: $button-color;
+        background-color: $background-color;
     }
 }
+
 .a-btn--transparent {
     background-color: transparent;
     color: $ds-colors-neutral-black;
