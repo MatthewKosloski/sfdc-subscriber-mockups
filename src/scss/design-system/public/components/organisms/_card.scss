@@ -11,6 +11,7 @@
     border-radius: ds-px-to-em(6);
     border: ds-px-to-em(1) solid $ds-colors-gallery;
     box-shadow: 0 ds-px-to-em(3) ds-px-to-em(4) 0 rgba(0, 0, 0, 0.04);
+    background-color: $ds-colors-white;
 }
 
 .o-card__header,
