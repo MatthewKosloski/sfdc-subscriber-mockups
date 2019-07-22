@@ -2,7 +2,11 @@
 
 $ds-layout-container-width: 100%;
 
-@import 'design-system/design-system';
+@import '../design-system/design-system';
+@import
+    'components/atoms/index',
+    'components/molecules/index',
+    'components/organisms/index';
 
 html {
     font-family: $ds-typography-font-primary;
@@ -13,13 +17,14 @@ body {
 }
 
 .l-container {
-    // @include ds-spacing-em(p, two);
+    padding: 0;
+    display: flex;
 }
 
-aside {
-    @include ds-spacing-em((pt, pb, pl), two);
-    border-left: ds-px-to-em(1) solid $ds-colors-gallery;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
+.l-container__left {
+    flex: 2.5;
+}
+
+.l-container__right {
+    flex: 1;
 }

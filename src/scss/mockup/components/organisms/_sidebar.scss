@@ -1,0 +1,21 @@
+.o-sidebar {
+    @include ds-spacing-em(p, two);
+    border-left: ds-px-to-em(1) solid $ds-colors-gallery;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.o-sidebar__header {
+    display: flex;
+    align-items: center;
+}
+
+.o-sidebar__titles {
+    display: inline-block;
+}
+
+.o-sidebar__title {
+    margin-bottom: 0;
+}
+
