@@ -6,8 +6,8 @@
 .o-card {
     width: 100%;
     border-radius: ds-px-to-em(6);
-    border: 2px solid $ds-colors-gallery;
-    box-shadow: 0 ds-px-to-em(3) ds-px-to-em(5) 0 rgba(0, 0, 0, 0.05);
+    border: ds-px-to-em(1) solid $ds-colors-gallery;
+    box-shadow: 0 ds-px-to-em(3) ds-px-to-em(4) 0 rgba(0, 0, 0, 0.04);
 }
 
 .o-card__header,
@@ -23,11 +23,11 @@
 
 .o-card__header {
     @include ds-spacing-em(py, half);
-    border-bottom: 2px solid $ds-colors-gallery;
+    border-bottom: ds-px-to-em(1) solid $ds-colors-gallery;
 }
 
 .o-card__footer {
-    border-top: 2px solid $ds-colors-gallery;
+    border-top: ds-px-to-em(1) solid $ds-colors-gallery;
 }
 
 .o-card--evenly-distributed-header {
