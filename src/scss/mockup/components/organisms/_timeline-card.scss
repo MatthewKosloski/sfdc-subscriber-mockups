@@ -1,0 +1,14 @@
+.o-timeline-card {
+    .o-card__header {
+        @include ds-breakpoint(md) {
+            display: flex;
+        }
+        display: block;
+    }
+}
+
+.o-timeline-card__date-range {
+    @include ds-spacing-em(mt, (quarter, zero));
+    text-align: left;
+    margin-bottom: 0;
+}

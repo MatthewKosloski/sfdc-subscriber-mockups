@@ -1,0 +1,6 @@
+.o-subscriptions-card {
+    @include ds-breakpoint(lg) {
+        padding-right: 0;
+    }
+    @include ds-spacing-em(pt, one);
+}
