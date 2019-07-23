@@ -1,0 +1,36 @@
+.m-event-log-list-item {
+    margin-bottom: 0;
+    &:not(:last-child) {
+        @include ds-spacing-em(mb, one);
+    }
+    @include ds-spacing-em(pl, two);
+    position: relative;
+}
+
+.m-event-log-list-item__timestamp {
+    @include ds-spacing-em(mb, one);
+    font-weight: 700;
+    color: $ds-colors-pantone-cool-gray-4;
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: $ds-colors-white;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 4px solid;
+        border-color: inherit;
+        box-shadow: 0 0 0 6px $ds-colors-white;
+    }
+}
+
+.m-event-log-list-item__title {
+    @include ds-spacing-em(mb, quarter);
+}
+
+.m-event-log-list-item__subtitle {
+    margin-bottom: 0;
+}

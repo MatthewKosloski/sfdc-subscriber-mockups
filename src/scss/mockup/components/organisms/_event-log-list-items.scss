@@ -1,0 +1,16 @@
+.o-event-log-list-items {
+    @include ds-spacing-em(mt, two);
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    position: relative;
+    &::before {
+        content: '';
+        width: ds-px-to-em(2);
+        height: 100%;
+        background-color: $ds-colors-gallery;
+        display: block;
+        position: absolute;
+        left: 8px;
+    }
+}
