@@ -10,16 +10,15 @@
     border-left: ds-px-to-em(5) solid;
 }
 
-.m-card-list-item__left {
-    max-width: 70%;
-    position: relative;
-}
-
-.m-card-list-item,
-.m-card-list-item__left {
+.m-card-list-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.m-card-list-item__titles {
+    margin-right: auto;
+    max-width: 60%;
 }
 
 .m-card-list-item__title {
