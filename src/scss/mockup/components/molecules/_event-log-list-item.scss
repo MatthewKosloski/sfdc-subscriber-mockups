@@ -29,6 +29,7 @@
 
 .m-event-log-list-item__title {
     @include ds-spacing-em(mb, quarter);
+    word-break: break-all;
 }
 
 .m-event-log-list-item__subtitle {
