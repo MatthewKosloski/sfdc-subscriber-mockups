@@ -504,7 +504,6 @@
                         <li><code>o-card--constrict-body-height</code> constricts the height of the card's body to a pixel value.</li>
                         <li><code>o-card--full-body-height</code> constricts the height to 100% of the parent element's height.</li>
                         <li><code>o-card--no-padded-body</code> removes the default padding from the body.</li>
-                        <li><code>o-card--evenly-distributed-header</code> evenly distributes items in the header on the line.</li>
                     </ul>
                     <div class="section__inner">
                         <div class="l-row">
@@ -547,14 +546,33 @@
                                 <div class="l-row">
                                     <div class="l-col l-col--xs-12-of-12">
                                         <h4 class="section__subtitle u-font-light">With Additional Content on Right Side</h4>
-                                        <p>To put content in the bottom of the card body, apply the <code>o-card--evenly-distributed-header</code> modifier to the parent class.</p>
+                                        <p>To put additional content on the right side of the card title, simply add the <code>u-mr-auto</code> utility class to the title.</p>
                                         <div>
-                                            <div class="o-card o-card--evenly-distributed-header">
+                                            <div class="o-card">
                                                 <div class="o-card__header">
-                                                    <div class="o-card__titles">
+                                                    <div class="o-card__titles u-mr-auto">
                                                         <p class="o-card__title h3">Card Title</p>
                                                     </div>
                                                     <p class="u-m-zero">Additional Content</p>
+                                                </div>
+                                                <div class="o-card__body">
+                                                    <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="l-row">
+                                    <div class="l-col l-col--xs-12-of-12">
+                                        <h4 class="section__subtitle u-font-light">With Additional Content on Left Side</h4>
+                                        <p>To put additional content on the left side of the card title, simply add the <code>u-ml-auto u-order-last</code> utility classes to the titles container.</p>
+                                        <div>
+                                            <div class="o-card">
+                                                <div class="o-card__header">
+                                                    <div class="o-card__titles u-order-last u-ml-auto">
+                                                        <p class="o-card__title h3">Card Title</p>
+                                                    </div>
+                                                    <p class="u-mb-zero">Additional Content</p>
                                                 </div>
                                                 <div class="o-card__body">
                                                     <p>Maecenas in tellus eu justo porttitor mattis. Curabitur lacinia ornare imperdiet.</p>
