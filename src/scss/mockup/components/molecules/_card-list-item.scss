@@ -1,16 +1,17 @@
 .m-card-list-item {
     &:not(:last-of-type) {
-        border-bottom: ds-px-to-em(1) solid $ds-colors-gallery;
+        box-shadow: 0 ds-px-to-em(1) $ds-colors-gallery;
     }
-    @include ds-spacing-em((px, py), one);
-    margin-bottom: 0;
     svg {
         width: ds-px-to-em(12);
     }
+    @include ds-spacing-em((px, py), one);
+    margin-bottom: 0;
+    border-left: ds-px-to-em(5) solid;
 }
 
 .m-card-list-item__left {
-    max-width: 75%;
+    max-width: 70%;
     position: relative;
 }
 
@@ -21,20 +22,12 @@
     justify-content: space-between;
 }
 
-.m-card-list-item__titles {
-    @include ds-spacing-em(ml, two);
-}
-
 .m-card-list-item__title {
-    margin-bottom: 0;
+    @include ds-spacing-em(mb, quarter);
     word-break: break-word;
 }
 
-.m-card-list-item__dot {
-    @include ds-spacing-em(mr, half);
-    position: absolute;
-    width: ds-px-to-em(14);
-    height: ds-px-to-em(14);
-    display: inline-block;
-    border-radius: 100%;
+.m-card-list-item__subtitle {
+    color: $ds-colors-pantone-cool-gray-4;
+    margin-bottom: 0;
 }

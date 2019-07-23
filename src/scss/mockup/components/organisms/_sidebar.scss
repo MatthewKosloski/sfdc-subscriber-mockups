@@ -1,5 +1,10 @@
 .o-sidebar {
-    @include ds-spacing-em(p, two);
+    @include ds-spacing-em(p, one);
+    @include ds-breakpoint(xl) {
+        flex: 1;
+    }
+    flex: 1 0 100%;
+    background-color: $ds-colors-white;
     border-left: ds-px-to-em(1) solid $ds-colors-gallery;
     height: 100vh;
     position: sticky;
@@ -7,8 +12,9 @@
 }
 
 .o-sidebar__header {
-    display: flex;
-    align-items: center;
+    @include ds-spacing-em(mt, one);
+    // display: flex;
+    // align-items: center;
 }
 
 .o-sidebar__titles {
