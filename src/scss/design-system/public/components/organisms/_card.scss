@@ -55,12 +55,6 @@
 .o-card__body {
     overflow-y: auto;
     height: 100%;
-    p {
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-        color: $ds-colors-neutral-black;
-    }
 }
 
 .o-card--constrict-body-height {
