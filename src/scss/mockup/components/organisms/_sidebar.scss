@@ -11,10 +11,18 @@
     top: 0;
 }
 
-.o-sidebar__header {
+.o-sidebar__header,
+.o-sidebar__controls {
     @include ds-spacing-em(mt, one);
-    // display: flex;
-    // align-items: center;
+}
+
+.o-sidebar__controls .m-dropdown {
+    flex: 3;
+}
+
+.o-sidebar__header {
+    display: flex;
+    align-items: center;
 }
 
 .o-sidebar__titles {
