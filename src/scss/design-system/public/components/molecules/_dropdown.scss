@@ -17,7 +17,9 @@
         align-items: center;
     }
     position: relative;
+    display: inline-block;
 }
+
 .m-dropdown__current-selection {
     @include ds-spacing-em(ml, quarter);
 }
