@@ -23,7 +23,7 @@
 
 .m-card-list-item__title {
     @include ds-spacing-em(mb, quarter);
-    word-break: break-word;
+    word-break: break-all;
 }
 
 .m-card-list-item__subtitle {
