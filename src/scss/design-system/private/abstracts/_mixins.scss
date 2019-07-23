@@ -136,6 +136,8 @@
 
 @mixin _design-system-create-spacing-classes($shorthands-map, $step-map, $ratio-xs, $ratio-lg) {
     @each $shorthand, $props in $shorthands-map {
+
+        // vertical rhythm classes
         @each $step-name, $step-value in $step-map {
             .u-#{$shorthand}-#{$step-name} {
                 @include _design-system-spacing(
@@ -150,6 +152,13 @@
                     $is-negative: false);
             }
         }
+
+        .u-#{$shorthand}-auto {
+            @each $prop in $props {
+                #{$prop}: auto;
+            }
+        }
+
     }
 }
 
