@@ -12,3 +12,11 @@
     $base-font-size: ($base-font-size / 100) * 16;
     @return _design-system-px-to-rem($px, $base-font-size);
 }
+
+@function ds-vr-em($step, $ratio: $ds-typography-ratio-xs) {
+    @return _design-system-vr-em($step, $ratio);
+}
+
+@function ds-vr-rem($step, $ratio: $ds-typography-ratio-xs) {
+    @return _design-system-vr-rem($step, $ratio);
+}
