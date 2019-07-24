@@ -7,10 +7,33 @@
     position: relative;
 }
 
+.m-event-log-list-item--checkpoint,
 .m-event-log-list-item__timestamp {
-    @include ds-spacing-em(mb, one);
     font-weight: 700;
     color: $ds-colors-pantone-cool-gray-4;
+}
+
+.m-event-log-list-item--checkpoint {
+    &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $ds-colors-gallery;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+    }
+    span {
+        background-color: $ds-colors-white;
+        padding: ds-px-to-em(6) ds-px-to-em(6) ds-px-to-em(6) 0;
+        margin-left: -#{ds-px-to-em(12)};
+    }
+    padding-left: 0;
+}
+
+.m-event-log-list-item__timestamp {
+    @include ds-spacing-em(mb, one);
     &::before {
         content: "";
         width: 20px;
