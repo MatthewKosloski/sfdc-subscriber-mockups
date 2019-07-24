@@ -1,0 +1,11 @@
+.o-header {
+    @include ds-spacing-em(p, one);
+    background-color: $ds-colors-white;
+    border-bottom: 1px solid $ds-colors-gallery;
+    display: flex;
+    align-items: center;
+}
+
+.o-header__titles {
+    display: inline-block;
+}
