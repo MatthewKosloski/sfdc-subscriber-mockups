@@ -1,9 +1,6 @@
 .a-btn {
     @include ds-spacing-em(py, half);
     @include ds-spacing-em(px, one);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1em;
     border-radius: ds-px-to-em(4);
     border: ds-px-to-em(1) solid transparent;
